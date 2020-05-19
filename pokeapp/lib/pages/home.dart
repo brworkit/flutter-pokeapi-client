@@ -14,7 +14,10 @@ class _HomePageState extends State<Home> {
     {
       "order": 1,
       "name": 'Bulbasaur',
-      "types": [{"type": 'Grass', "color": Colors.green}, {"type": 'Posion', "color": Colors.purple}],
+      "types": [
+        {"type": 'Grass', "color": Colors.green},
+        {"type": 'Posion', "color": Colors.purple}
+      ],
       "color": Colors.green,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
@@ -22,7 +25,10 @@ class _HomePageState extends State<Home> {
     {
       "order": 2,
       "name": 'Ivysaur',
-      "types": [{"type": 'Grass', "color": Colors.green}, {"type": 'Posion', "color": Colors.purple}],
+      "types": [
+        {"type": 'Grass', "color": Colors.green},
+        {"type": 'Posion', "color": Colors.purple}
+      ],
       "color": Colors.green,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png'
@@ -30,7 +36,10 @@ class _HomePageState extends State<Home> {
     {
       "order": 3,
       "name": 'Venusaur',
-      "types": [{"type": 'Grass', "color": Colors.green}, {"type": 'Posion', "color": Colors.purple}],
+      "types": [
+        {"type": 'Grass', "color": Colors.green},
+        {"type": 'Posion', "color": Colors.purple}
+      ],
       "color": Colors.green,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png'
@@ -38,7 +47,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 4,
       "name": 'Charmander',
-      "types": [{"type": 'Fire', "color": Colors.orange}],
+      "types": [
+        {"type": 'Fire', "color": Colors.orange}
+      ],
       "color": Colors.orange,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'
@@ -46,7 +57,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 5,
       "name": 'Charmelleon',
-      "types": [{"type": 'Fire', "color": Colors.orange}],
+      "types": [
+        {"type": 'Fire', "color": Colors.orange}
+      ],
       "color": Colors.orange,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png'
@@ -54,7 +67,10 @@ class _HomePageState extends State<Home> {
     {
       "order": 6,
       "name": 'Charizard',
-      "types": [{"type": 'Fire', "color": Colors.orange}, {"type": 'Flying', "color": Colors.grey}],
+      "types": [
+        {"type": 'Fire', "color": Colors.orange},
+        {"type": 'Flying', "color": Colors.grey}
+      ],
       "color": Colors.orange,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png'
@@ -62,7 +78,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 7,
       "name": 'Squirtle',
-      "types": [{"type": 'Water', "color": Colors.blue}],
+      "types": [
+        {"type": 'Water', "color": Colors.blue}
+      ],
       "color": Colors.blue,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'
@@ -70,7 +88,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 8,
       "name": 'Wartortle',
-      "types": [{"type": 'Water', "color": Colors.blue}],
+      "types": [
+        {"type": 'Water', "color": Colors.blue}
+      ],
       "color": Colors.blue,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png'
@@ -78,7 +98,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 9,
       "name": 'Blastoise',
-      "types": [{"type": 'Water', "color": Colors.blue}],
+      "types": [
+        {"type": 'Water', "color": Colors.blue}
+      ],
       "color": Colors.blue,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png'
@@ -86,7 +108,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 10,
       "name": 'Caterpie',
-      "types": [{"type": 'Bug', "color": Colors.greenAccent}],
+      "types": [
+        {"type": 'Bug', "color": Colors.greenAccent}
+      ],
       "color": Colors.greenAccent,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png'
@@ -94,7 +118,9 @@ class _HomePageState extends State<Home> {
     {
       "order": 11,
       "name": 'Metapod',
-      "types": [{"type": 'Bug', "color": Colors.greenAccent}],
+      "types": [
+        {"type": 'Bug', "color": Colors.greenAccent}
+      ],
       "color": Colors.greenAccent,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png'
@@ -102,7 +128,10 @@ class _HomePageState extends State<Home> {
     {
       "order": 12,
       "name": 'Butterfree',
-      "types": [{"type": 'Bug', "color": Colors.greenAccent}, {"type": 'Flying', "color": Colors.grey}],
+      "types": [
+        {"type": 'Bug', "color": Colors.greenAccent},
+        {"type": 'Flying', "color": Colors.grey}
+      ],
       "color": Colors.greenAccent,
       "image":
           'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png'
@@ -112,17 +141,32 @@ class _HomePageState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      backgroundColor: Colors.transparent,
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            backgroundColor: Colors.red,
+            title: Row(
+              children: <Widget>[
+                Icon(Icons.ac_unit),
+                SizedBox(
+                  width: 2,
+                ),
+                Text("Pokémon"),
+              ],
+            ),
+            actions: <Widget>[
+              Icon(Icons.search),
+              SizedBox(
+                width: 15,
+              ),
+            ],
+            floating: true,
+            snap: true,
+          ),
+          PokemonListView(items)
+        ],
       ),
-      body: Center(
-        child: PokemonListView(items),
-      ),
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
@@ -134,44 +178,59 @@ class PokemonListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ListView.builder(
-          itemCount: this.items.length,
-          itemBuilder: (context, index) {
-            var item = this.items[index];
-
-            return Card(
-                          child: ListTile(
-                leading: Image.network(
-                  item["image"],
-                  fit: BoxFit.cover,
-                ),
-                title: Text(item["name"], style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                // subtitle: Expanded(
-                //   child: ListView.builder(                  
-                //     scrollDirection: Axis.horizontal,
-                //     itemCount: item["types"].length,
-                //     itemBuilder: (context, index) {
-                //     return Container(width: 10, height: 10,);
-                //   }),
-                // ),
-                subtitle: Container(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  child: Badge(
-                    elevation: 2,
-                    shape: BadgeShape.square,
-                    badgeColor: item["types"][0]["color"],
-                    badgeContent: Text(item["types"][0]["type"].toString(), style: TextStyle(color: Colors.white, fontSize: 14),)
-                  ),
-                ),
-                trailing: Badge(
-                  badgeColor: item["color"],
-                  badgeContent: Text(item["order"].toString(), style: TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.bold),)
-                ),
-              ),
-            );
-          }),
+    return SliverList(
+      delegate: SliverChildBuilderDelegate(
+        (context, index) {
+          var item = this.items[index];
+          var types = createTypesBadges(item);
+          return Card(
+              child: ListTile(
+            leading: Image.network(
+              item["image"],
+              fit: BoxFit.cover,
+            ),
+            title: Text(item["name"],
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            
+            subtitle: Container(
+              child: types,
+            ),
+            
+            trailing: Badge(
+                badgeColor: item["color"],
+                badgeContent: Text(
+                  item["order"].toString(),
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold),
+                )),
+          ));
+        },
+        // Builds 1000 ListTiles
+        childCount: items.length,
+      ),
     );
-    
+  }
+
+  List<Widget> _createChildren(List<Map<String, dynamic>> itemTypes) {
+      return List<Widget>.generate(itemTypes.length, (int index) {
+        var itemType = itemTypes[index];
+
+        return Badge(
+            elevation: 2,
+            shape: BadgeShape.square,
+            badgeColor: itemType["color"],
+            badgeContent: Text(
+              itemType["type"],
+              style: TextStyle(color: Colors.white, fontSize: 14),
+            ));
+      });
+    }
+
+  createTypesBadges(Map<String, dynamic> item) {    
+    return Row(
+      children: _createChildren(item["types"]),
+    );
   }
 }
