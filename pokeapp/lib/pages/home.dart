@@ -1,6 +1,4 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:pokeapp/pages/pokemon_list_view.dart';
 
 class Home extends StatefulWidget {

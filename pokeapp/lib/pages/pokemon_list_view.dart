@@ -1,16 +1,13 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
-
-const Map<String, Color> colors = {
-  "green": Colors.green
-};
+import 'package:pokeapp/extensions/string_to_color.dart';
 
 class PokemonListView extends StatelessWidget {
   const PokemonListView(this.items) : super();
   final List<Map<String, dynamic>> items;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return SliverList(
       delegate: SliverChildBuilderDelegate(
         (context, index) {
@@ -28,7 +25,7 @@ class PokemonListView extends StatelessWidget {
               child: types,
             ),
             trailing: Badge(
-                badgeColor: translateColor(item["color"]),
+                badgeColor: item["color"].toString().color(),
                 badgeContent: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
@@ -53,7 +50,7 @@ class PokemonListView extends StatelessWidget {
       return Badge(
           elevation: 2,
           shape: BadgeShape.square,
-          badgeColor: translateColor(itemType["color"]),
+          badgeColor: itemType["color"].toString().color(),
           badgeContent: Text(
             itemType["name"],
             style: TextStyle(color: Colors.white, fontSize: 14),
@@ -61,7 +58,6 @@ class PokemonListView extends StatelessWidget {
     });
   }
 
-  translateColor(String color) => colors.containsKey(color) ? colors[color] : Colors.black;
 
   createTypesBadges(Map<String, dynamic> item) {
     return Row(
