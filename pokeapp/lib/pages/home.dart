@@ -1,6 +1,7 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:pokeapp/pages/pokemon_list_view.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -12,225 +13,84 @@ class Home extends StatefulWidget {
 class _HomePageState extends State<Home> {
   final List<Map<String, dynamic>> items = [
     {
-      "order": 1,
-      "name": 'Bulbasaur',
-      "types": [
-        {"type": 'Grass', "color": Colors.green},
-        {"type": 'Posion', "color": Colors.purple}
-      ],
-      "color": Colors.green,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png'
-    },
-    {
+      "id": 2,
       "order": 2,
-      "name": 'Ivysaur',
+      "name": "ivysaur",
+      "weight": 130,
+      "height": 10,
+      "base_experience": 142,
       "types": [
-        {"type": 'Grass', "color": Colors.green},
-        {"type": 'Posion', "color": Colors.purple}
+        {"name": "poison", "color": "purple"},
+        {"name": "grass", "color": "green"}
       ],
-      "color": Colors.green,
+      "color": "blue",
       "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png'
-    },
-    {
-      "order": 3,
-      "name": 'Venusaur',
-      "types": [
-        {"type": 'Grass', "color": Colors.green},
-        {"type": 'Posion', "color": Colors.purple}
-      ],
-      "color": Colors.green,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png'
-    },
-    {
-      "order": 4,
-      "name": 'Charmander',
-      "types": [
-        {"type": 'Fire', "color": Colors.orange}
-      ],
-      "color": Colors.orange,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png'
-    },
-    {
-      "order": 5,
-      "name": 'Charmelleon',
-      "types": [
-        {"type": 'Fire', "color": Colors.orange}
-      ],
-      "color": Colors.orange,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png'
-    },
-    {
-      "order": 6,
-      "name": 'Charizard',
-      "types": [
-        {"type": 'Fire', "color": Colors.orange},
-        {"type": 'Flying', "color": Colors.grey}
-      ],
-      "color": Colors.orange,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png'
-    },
-    {
-      "order": 7,
-      "name": 'Squirtle',
-      "types": [
-        {"type": 'Water', "color": Colors.blue}
-      ],
-      "color": Colors.blue,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png'
-    },
-    {
-      "order": 8,
-      "name": 'Wartortle',
-      "types": [
-        {"type": 'Water', "color": Colors.blue}
-      ],
-      "color": Colors.blue,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png'
-    },
-    {
-      "order": 9,
-      "name": 'Blastoise',
-      "types": [
-        {"type": 'Water', "color": Colors.blue}
-      ],
-      "color": Colors.blue,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png'
-    },
-    {
-      "order": 10,
-      "name": 'Caterpie',
-      "types": [
-        {"type": 'Bug', "color": Colors.greenAccent}
-      ],
-      "color": Colors.greenAccent,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png'
-    },
-    {
-      "order": 11,
-      "name": 'Metapod',
-      "types": [
-        {"type": 'Bug', "color": Colors.greenAccent}
-      ],
-      "color": Colors.greenAccent,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png'
-    },
-    {
-      "order": 12,
-      "name": 'Butterfree',
-      "types": [
-        {"type": 'Bug', "color": Colors.greenAccent},
-        {"type": 'Flying', "color": Colors.grey}
-      ],
-      "color": Colors.greenAccent,
-      "image":
-          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png'
+          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
     }
   ];
+
+  @override
+  Widget build(BuildContext context) {
+    return RootPage(items: items);
+  }
+}
+
+class RootPage extends StatelessWidget {
+  const RootPage({
+    Key key,
+    @required this.items,
+  }) : super(key: key);
+
+  final List<Map<String, dynamic>> items;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            backgroundColor: Colors.red,
-            title: Row(
-              children: <Widget>[
-                Icon(Icons.ac_unit),
-                SizedBox(
-                  width: 2,
-                ),
-                Text("Pokémon"),
-              ],
-            ),
-            actions: <Widget>[
-              Icon(Icons.search),
-              SizedBox(
-                width: 15,
-              ),
-            ],
-            floating: true,
-            snap: true,
-          ),
-          PokemonListView(items)
-        ],
+        slivers: <Widget>[CustomSliverAppBar(), PokemonListView(items)],
       ),
     );
   }
 }
 
-class PokemonListView extends StatelessWidget {
-  const PokemonListView(this.items) : super();
-
-  final List<Map<String, dynamic>> items;
+class CustomSliverAppBar extends StatelessWidget {
+  const CustomSliverAppBar({
+    Key key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (context, index) {
-          var item = this.items[index];
-          var types = createTypesBadges(item);
-          return Card(
-              child: ListTile(
-            leading: Image.network(
-              item["image"],
-              fit: BoxFit.cover,
-            ),
-            title: Text(item["name"],
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-            
-            subtitle: Container(
-              child: types,
-            ),
-            
-            trailing: Badge(
-                badgeColor: item["color"],
-                badgeContent: Text(
-                  item["order"].toString(),
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold),
-                )),
-          ));
-        },
-        // Builds 1000 ListTiles
-        childCount: items.length,
-      ),
+    return SliverAppBar(
+      backgroundColor: Colors.red,
+      floating: true,
+      snap: true,
+      title: AppBarTitle(),
+      actions: createAppBarActions(),
     );
   }
 
-  List<Widget> _createChildren(List<Map<String, dynamic>> itemTypes) {
-      return List<Widget>.generate(itemTypes.length, (int index) {
-        var itemType = itemTypes[index];
+  List<Widget> createAppBarActions() {
+    return <Widget>[
+      Icon(Icons.search),
+      SizedBox(
+        width: 15,
+      ),
+    ];
+  }
+}
 
-        return Badge(
-            elevation: 2,
-            shape: BadgeShape.square,
-            badgeColor: itemType["color"],
-            badgeContent: Text(
-              itemType["type"],
-              style: TextStyle(color: Colors.white, fontSize: 14),
-            ));
-      });
-    }
+class AppBarTitle extends StatelessWidget {
+  const AppBarTitle({
+    Key key,
+  }) : super(key: key);
 
-  createTypesBadges(Map<String, dynamic> item) {    
+  @override
+  Widget build(BuildContext context) {
     return Row(
-      children: _createChildren(item["types"]),
+      children: <Widget>[
+        Text("Pokémon"),
+      ],
     );
   }
 }
