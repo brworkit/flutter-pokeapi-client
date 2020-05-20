@@ -4,6 +4,7 @@ import 'package:pokeapp/extensions/string_to_color.dart';
 
 class PokemonListView extends StatelessWidget {
   const PokemonListView(this.items) : super();
+  
   final List<Map<String, dynamic>> items;
 
   @override
