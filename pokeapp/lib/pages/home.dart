@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokeapp/data.dart';
 import 'package:pokeapp/pages/pokemon_list_view.dart';
 
 class Home extends StatefulWidget {
@@ -9,23 +10,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomePageState extends State<Home> {
-  final List<Map<String, dynamic>> items = [
-    {
-      "id": 2,
-      "order": 2,
-      "name": "ivysaur",
-      "weight": 130,
-      "height": 10,
-      "base_experience": 142,
-      "types": [
-        {"name": "poison", "color": "purple"},
-        {"name": "grass", "color": "green"}
-      ],
-      "color": "blue",
-      "image":
-          "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png"
-    }
-  ];
+  final List<Map<String, dynamic>> items = POKEMONS;
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +72,7 @@ class AppBarTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        Text("Pokémon"),
+        Text("Pokédex"),
       ],
     );
   }
