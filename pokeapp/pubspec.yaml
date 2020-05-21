@@ -24,7 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  strcolor: ^1.0.0 
+  strcolor: ^1.0.2 
   badges: ^1.1.1
   cupertino_icons: ^0.1.3
 
