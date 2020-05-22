@@ -1,5 +1,5 @@
 const List<Map<String, dynamic>> POKEMONS = [
-    {
+{
       "id": 1,
       "order": 1,
       "name": "bulbasaur",
@@ -11,11 +11,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -39,11 +45,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -67,11 +79,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -95,7 +113,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -119,7 +140,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -143,11 +167,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -171,7 +201,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -195,7 +228,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -219,7 +255,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -243,7 +282,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -261,13 +303,16 @@ const List<Map<String, dynamic>> POKEMONS = [
       "name": "metapod",
       "weight": 99,
       "height": 7,
-      "color": "light_green",
+      "color": "black",
       "base_experience": 72,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
       "types": [
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -288,11 +333,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -316,11 +367,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -344,11 +401,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -369,11 +432,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -397,11 +466,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -428,11 +503,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -459,11 +540,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -490,7 +577,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -517,7 +607,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -544,11 +637,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -572,11 +671,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -600,7 +705,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -627,7 +735,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -654,7 +765,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -678,7 +792,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -702,7 +819,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -726,7 +846,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -750,7 +873,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -777,7 +903,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -804,11 +933,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         },
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -835,7 +970,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -862,7 +1000,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -889,11 +1030,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         },
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -919,8 +1066,11 @@ const List<Map<String, dynamic>> POKEMONS = [
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
       "types": [
         {
-          "name": "fairy",
-          "color": "black"
+          "name": "normal",
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -946,8 +1096,11 @@ const List<Map<String, dynamic>> POKEMONS = [
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
       "types": [
         {
-          "name": "fairy",
-          "color": "black"
+          "name": "normal",
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -974,7 +1127,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -998,7 +1154,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -1019,14 +1178,13 @@ const List<Map<String, dynamic>> POKEMONS = [
       "color": "black",
       "base_experience": 95,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
-      "types": [
-        {
-          "name": "fairy",
-          "color": "black"
-        },
+      "types": [        
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -1050,14 +1208,13 @@ const List<Map<String, dynamic>> POKEMONS = [
       "color": "black",
       "base_experience": 196,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
-      "types": [
-        {
-          "name": "fairy",
-          "color": "black"
-        },
+      "types": [        
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -1084,11 +1241,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -1112,11 +1275,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -1140,11 +1309,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -1168,11 +1343,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -1196,11 +1377,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -1224,11 +1411,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -1255,11 +1448,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -1286,11 +1485,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -1317,11 +1522,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -1348,7 +1559,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -1375,7 +1589,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -1402,7 +1619,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -1429,7 +1649,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -1456,7 +1679,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -1483,7 +1709,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -1510,7 +1739,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -1537,7 +1769,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -1564,7 +1799,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -1591,7 +1829,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -1618,7 +1859,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -1645,7 +1889,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -1672,11 +1919,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -1703,7 +1956,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -1730,7 +1986,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -1757,7 +2016,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -1784,7 +2046,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -1811,7 +2076,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -1838,7 +2106,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -1865,11 +2136,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -1893,11 +2170,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -1921,11 +2204,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -1949,11 +2238,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -1980,11 +2275,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2011,11 +2312,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -2042,11 +2349,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -2073,11 +2386,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -2104,7 +2423,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -2131,7 +2453,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -2158,11 +2483,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2189,11 +2520,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2220,11 +2557,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "steel",
-          "color": "black"
+          "color": {
+            "name": "Cool gray",
+            "hex": "#808080"
+          }
         },
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -2251,11 +2594,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "steel",
-          "color": "black"
+          "color": {
+            "name": "Cool gray",
+            "hex": "#808080"
+          }
         },
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -2282,11 +2631,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -2313,11 +2668,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -2344,11 +2705,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -2375,7 +2742,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2402,11 +2772,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ice",
-          "color": "black"
+          "color": {
+            "name": "Cyan",
+            "hex": "#00ffff"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2433,7 +2809,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -2460,7 +2839,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -2487,7 +2869,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2514,11 +2899,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ice",
-          "color": "black"
+          "color": {
+            "name": "Cyan",
+            "hex": "#00ffff"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2545,11 +2936,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "ghost",
-          "color": "black"
+          "color": {
+            "name": "Dark violet",
+            "hex": "#9400d3"
+          }
         }
       ],
       "abilities": [
@@ -2570,11 +2967,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "ghost",
-          "color": "black"
+          "color": {
+            "name": "Dark violet",
+            "hex": "#9400d3"
+          }
         }
       ],
       "abilities": [
@@ -2595,11 +2998,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         },
         {
           "name": "ghost",
-          "color": "black"
+          "color": {
+            "name": "Dark violet",
+            "hex": "#9400d3"
+          }
         }
       ],
       "abilities": [
@@ -2620,11 +3029,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -2651,7 +3066,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -2678,7 +3096,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -2705,7 +3126,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2732,7 +3156,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -2759,7 +3186,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -2786,7 +3216,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -2813,11 +3246,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -2841,11 +3280,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         },
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -2869,7 +3314,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -2896,7 +3344,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -2923,7 +3374,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -2950,7 +3404,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fighting",
-          "color": "black"
+          "color": {
+            "name": "Maroon",
+            "hex": "#800000"
+          }
         }
       ],
       "abilities": [
@@ -2977,7 +3434,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3004,7 +3464,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -3025,7 +3488,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "poison",
-          "color": "purple"
+          "color": {
+            "name": "Purple",
+            "hex": "#800080"
+          }
         }
       ],
       "abilities": [
@@ -3046,11 +3512,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         },
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -3077,11 +3549,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         },
         {
           "name": "ground",
-          "color": "black"
+          "color": {
+            "name": "Sand",
+            "hex": "#c2b280"
+          }
         }
       ],
       "abilities": [
@@ -3108,7 +3586,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3135,7 +3616,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "grass",
-          "color": "green"
+          "color": {
+            "name": "Green",
+            "hex": "#00ff00"
+          }
         }
       ],
       "abilities": [
@@ -3162,7 +3646,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3189,7 +3676,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3216,7 +3706,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3243,7 +3736,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3270,7 +3766,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3297,7 +3796,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3324,11 +3826,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3352,14 +3860,13 @@ const List<Map<String, dynamic>> POKEMONS = [
       "color": "black",
       "base_experience": 161,
       "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
-      "types": [
-        {
-          "name": "fairy",
-          "color": "black"
-        },
+      "types": [        
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -3386,11 +3893,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -3417,11 +3930,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         },
         {
           "name": "ice",
-          "color": "black"
+          "color": {
+            "name": "Cyan",
+            "hex": "#00ffff"
+          }
         }
       ],
       "abilities": [
@@ -3448,7 +3967,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -3472,7 +3994,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -3496,7 +4021,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "bug",
-          "color": "light_green"
+          "color": {
+            "name": "Olive",
+            "hex": "#808000"
+          }
         }
       ],
       "abilities": [
@@ -3523,7 +4051,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3550,7 +4081,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3574,11 +4108,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3602,11 +4142,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "ice",
-          "color": "black"
+          "color": {
+            "name": "Cyan",
+            "hex": "#00ffff"
+          }
         },
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3633,7 +4179,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3657,7 +4206,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3684,7 +4236,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         }
       ],
       "abilities": [
@@ -3708,7 +4263,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -3732,7 +4290,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -3756,7 +4317,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3783,11 +4347,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -3814,11 +4384,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -3845,11 +4421,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -3876,11 +4458,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "water",
-          "color": "black"
+          "color": {
+            "name": "Azure",
+            "hex": "#007fff"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -3907,11 +4495,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "rock",
-          "color": "black"
+          "color": {
+            "name": "Brown",
+            "hex": "#a52a2a"
+          }
         }
       ],
       "abilities": [
@@ -3938,7 +4532,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "normal",
-          "color": "black"
+          "color": {
+            "name": "Warm gray",
+            "hex": "#808080"
+          }
         }
       ],
       "abilities": [
@@ -3965,11 +4562,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "ice",
-          "color": "black"
+          "color": {
+            "name": "Cyan",
+            "hex": "#00ffff"
+          }
         }
       ],
       "abilities": [
@@ -3993,11 +4596,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "electric",
-          "color": "black"
+          "color": {
+            "name": "Yellow",
+            "hex": "#ffff00"
+          }
         }
       ],
       "abilities": [
@@ -4021,11 +4630,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "fire",
-          "color": "black"
+          "color": {
+            "name": "Orange",
+            "hex": "#ffa500"
+          }
         }
       ],
       "abilities": [
@@ -4049,7 +4664,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "dragon",
-          "color": "black"
+          "color": {
+            "name": "Indigo",
+            "hex": "#4b0082"
+          }
         }
       ],
       "abilities": [
@@ -4073,7 +4691,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "dragon",
-          "color": "black"
+          "color": {
+            "name": "Indigo",
+            "hex": "#4b0082"
+          }
         }
       ],
       "abilities": [
@@ -4097,11 +4718,17 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "flying",
-          "color": "black"
+          "color": {
+            "name": "Lavender",
+            "hex": "#e6e6fa"
+          }
         },
         {
           "name": "dragon",
-          "color": "black"
+          "color": {
+            "name": "Indigo",
+            "hex": "#4b0082"
+          }
         }
       ],
       "abilities": [
@@ -4125,7 +4752,10 @@ const List<Map<String, dynamic>> POKEMONS = [
       "types": [
         {
           "name": "psychic",
-          "color": "black"
+          "color": {
+            "name": "Hot pink",
+            "hex": "#ff69b4"
+          }
         }
       ],
       "abilities": [
@@ -4136,37 +4766,33 @@ const List<Map<String, dynamic>> POKEMONS = [
           "name": "pressure"
         }
       ]
-    },
-    {
-      "id": 151,
-      "order": 227,
-      "name": "mew",
-      "weight": 40,
-      "height": 4,
-      "color": "black",
-      "base_experience": 270,
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
-      "types": [
-        {
-          "name": "psychic",
-          "color": "black"
-        }
-      ],
-      "abilities": [
-        {
-          "name": "synchronize"
-        }
-      ]
     }
-  ];
+];
 
-
-
-
-
-
-
-
-
-
- 
+// const List<Map<String, dynamic>> POKEMONS = [
+//   {
+//     "id": 6,
+//     "order": 7,
+//     "name": "charizard",
+//     "weight": 905,
+//     "height": 17,
+//     "color": "pink",
+//     "base_experience": 240,
+//     "image":
+//         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+//     "types": [
+//       {
+//         "name": "flying",
+//         "color": {"name": "Lavender", "hex": "#e6e6fa"}
+//       },
+//       {
+//         "name": "fire",
+//         "color": {"name": "Orange", "hex": "#ffa500"}
+//       }
+//     ],
+//     "abilities": [
+//       {"name": "solar-power"},
+//       {"name": "blaze"}
+//     ]
+//   }
+// ];

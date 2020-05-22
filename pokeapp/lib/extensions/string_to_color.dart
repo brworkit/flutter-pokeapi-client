@@ -7,7 +7,7 @@
 //   "green": Colors.green,
 //   "greenAccent": Colors.greenAccent,
 //   "lightGreen": Colors.lightGreen,
-//   "lightGreenAccent": Colors.lightGreenAccent,  
+//   "lightGreenAccent": Colors.lightGreenAccent,
 //   "blue": Colors.blue,
 //   "blueAccent": Colors.blueAccent,
 //   "blueGrey": Colors.blueGrey,
@@ -42,7 +42,33 @@
 // };
 
 // extension StringToColor on String {
-//   color() {      
-//       return COLORS.containsKey(this) ? COLORS[this] : Colors.transparent;
+//   static final start = 1, end = 7, radix = 16, complement = 0xFF000000;
+
+//   colorFromHex() {    
+//     return Color(int.parse(this.substring(start, end), radix: radix) + complement);
 //   }
+
+//   color() {
+//     try {
+//       if (COLORS.containsKey(this)) {
+//         return COLORS[this];
+//       }
+//       return this.colorFromHex();
+//     } catch (e) {
+//       return Colors.transparent;
+//     }
+//   }
+// }
+
+// extension ContrastToColor on Color {
+//   static final brightness = 0.5;
+
+//   contrast() {
+//     try {
+//       return this.computeLuminance() > brightness ? Colors.black87 : Colors.white;
+//     } catch (e) {
+//       return Colors.white;
+//     }
+//   }
+
 // }
