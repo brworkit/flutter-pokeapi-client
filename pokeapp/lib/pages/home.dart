@@ -29,7 +29,7 @@ class RootPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Colors.white,
       body: CustomScrollView(
         slivers: <Widget>[CustomSliverAppBar(), PokemonListView(items)],
       ),
