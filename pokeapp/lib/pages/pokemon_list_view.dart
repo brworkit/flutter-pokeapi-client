@@ -1,7 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:strcolor/strcolor.dart';
-// import 'package:pokeapp/extensions/string_to_color.dart';
 
 class PokemonListView extends StatelessWidget {
   const PokemonListView(this.items) : super();
@@ -36,18 +35,20 @@ class PokemonTypesView extends StatelessWidget {
   }
 
   List<Widget> _createChildren(List<Map<String, dynamic>> itemTypes) {
-
     return List<Widget>.generate(itemTypes.length, (int index) {
       var itemType = itemTypes[index];
       Color badgeColor = itemType["color"]["hex"].toString().color();
-      
+
       return Badge(
           elevation: 2,
           shape: BadgeShape.square,
           badgeColor: badgeColor,
           badgeContent: Text(
             itemType["name"],
-            style: TextStyle(color: badgeColor.contrast(), fontSize: 14, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                color: badgeColor.contrast(),
+                fontSize: 14,
+                fontWeight: FontWeight.bold),
           ));
     });
   }
@@ -60,7 +61,6 @@ class PokemonPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Card(
         child: ListTile(
       leading: Image.network(
@@ -89,11 +89,11 @@ class PokemonNumberView extends StatelessWidget {
   final Map<String, dynamic> item;
 
   @override
-  Widget build(BuildContext context) {   
+  Widget build(BuildContext context) {
     // var types = item["types"].reversed.toList();
     // Color badgeColor = types[0]["color"]["hex"].toString().color();
 
-    return Badge(        
+    return Badge(
         toAnimate: true,
         badgeColor: Colors.red,
         badgeContent: Padding(
@@ -101,9 +101,7 @@ class PokemonNumberView extends StatelessWidget {
           child: Text(
             item["id"].toString(),
             style: TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-                fontWeight: FontWeight.bold),
+                color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
           ),
         ));
   }

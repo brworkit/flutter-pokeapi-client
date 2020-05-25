@@ -44,7 +44,7 @@
 // extension StringToColor on String {
 //   static final start = 1, end = 7, radix = 16, complement = 0xFF000000;
 
-//   colorFromHex() {    
+//   colorFromHex() {
 //     return Color(int.parse(this.substring(start, end), radix: radix) + complement);
 //   }
 

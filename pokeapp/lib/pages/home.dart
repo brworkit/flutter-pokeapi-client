@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/data.dart';
 import 'package:pokeapp/pages/pokemon_list_view.dart';
+import 'package:pokeapp/pages/pokemons_overview_page.dart';
 
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
@@ -31,7 +32,7 @@ class RootPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: CustomScrollView(
-        slivers: <Widget>[CustomSliverAppBar(), PokemonListView(items)],
+        slivers: <Widget>[CustomSliverAppBar(), PokemonOverviewPage(items)],
       ),
     );
   }

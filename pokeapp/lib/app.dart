@@ -6,13 +6,12 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Pokémon',
-      theme: ThemeData(        
+      theme: ThemeData(
         primarySwatch: Colors.red,
-        accentColor: Colors.yellow,        
+        accentColor: Colors.yellow,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: Home(title: 'Pokémon'),
     );
   }
 }
-
