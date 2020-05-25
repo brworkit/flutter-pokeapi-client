@@ -14,12 +14,8 @@ class RootPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: CustomScrollView(
-        slivers: <Widget>[
-          CustomSliverAppBar(),
-          PokemonOverviewPage(items),
-        ],
-      ),
+      appBar: AppBar(),
+      body: PokemonOverviewPage(items)      
     );
   }
 }
