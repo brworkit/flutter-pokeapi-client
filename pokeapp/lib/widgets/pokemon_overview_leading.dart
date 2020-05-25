@@ -9,7 +9,7 @@ class PokemonOverviewLeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image.network(
       item["image"],
-      fit: BoxFit.fill,
+      fit: BoxFit.cover,
     );
   }
 }
