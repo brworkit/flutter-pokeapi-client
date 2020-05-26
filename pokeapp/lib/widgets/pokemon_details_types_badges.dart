@@ -10,7 +10,8 @@ class PokemonDetailsTypesBadges extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: _createChildren(item["types"].reversed.toList()),
+      // children: _createChildren(item["types"].reversed.toList()),
+      children: _createChildren(item["types"]),
     );
   }
 

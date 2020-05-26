@@ -13,7 +13,11 @@ class PokemonOverviewPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CustomAppBar(titleText: "Pokemons",),
+      appBar:  AppBar(
+        backgroundColor: Colors.red,
+        actions: <Widget>[],
+        title: Text("${this.items.length} Pokémons", style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: Colors.white),),
+      ),
       body: PokemonsGrid(items: items)      
     );
   }

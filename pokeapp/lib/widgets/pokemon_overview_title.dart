@@ -9,7 +9,7 @@ class PokemonOverviewTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
         item["name"].toUpperCase(),
-        style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
         textAlign: TextAlign.center,
       );
   }
