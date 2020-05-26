@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokeapp/pages/pokemon_detail_page.dart';
 import 'package:pokeapp/widgets/pokemon_overview_background.dart';
 import 'package:pokeapp/widgets/pokemon_overview_number.dart';
 import 'package:pokeapp/widgets/pokemon_overview_subtitle.dart';
@@ -12,27 +13,26 @@ class PokemonOverviewItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridTile(
-      child: PokemonOverviewBackground(item: item),
-      footer: GridTileBar(
-        backgroundColor: Colors.black54,
-        leading: PokemonOverviewNumber(item: this.item),
-        title: PokemonOverviewTitle(item: this.item),
-        // subtitle: PokemonOverviewSubtitle(item: this.item),
-        trailing: PokemonOverviewIcon(item: this.item),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(10.0),
+      child: GridTile(
+        child: GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => PokemonDetailPage(this.item)));
+            },
+            child: PokemonOverviewBackground(item: item)),
+        header: GridTileBar(
+          title: PokemonOverviewSubtitle(item: this.item),
+        ),
+        footer: GridTileBar(
+          backgroundColor: Colors.black87,
+          leading: PokemonOverviewNumber(item: this.item),
+          title: PokemonOverviewTitle(item: this.item),
+          // subtitle: PokemonOverviewSubtitle(item: this.item),
+          trailing: PokemonOverviewIcon(item: this.item),
+        ),
       ),
-      // leading: PokemonOverviewIcon(item: item),
-      // title: PokemonOverviewTitle(item: item),
-      // subtitle: PokemonOverviewSubtitle(item: item),
-      // trailing: PokemonOverviewNumber(item: item),
     );
-
-    // return Card(
-    //     child: ListTile(
-    //   leading: PokemonOverviewIcon(item: item),
-    //   title: PokemonOverviewTitle(item: item),
-    //   subtitle: PokemonOverviewSubtitle(item: item),
-    //   trailing: PokemonOverviewNumber(item: item),
-    // ));
   }
 }

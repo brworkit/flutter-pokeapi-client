@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class AppBarTitle extends StatelessWidget {
-  const AppBarTitle({
-    Key key,
-  }) : super(key: key);
+class CustomAppBar extends AppBar {
+  final String titleText;
+  CustomAppBar({this.titleText}) : super();
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: <Widget>[
-        Text("Pokédex"),
-      ],
+    return AppBar(
+      actions: <Widget>[
+
+      ],      
+      title: Text(this.titleText),       
     );
   }
 }

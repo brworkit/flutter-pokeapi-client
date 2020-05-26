@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/pages/pokemons_overview_page.dart';
-import 'package:pokeapp/widgets/custom_sliver_bar.dart';
+import 'package:pokeapp/widgets/app_bar.dart';
 
 class RootPage extends StatelessWidget {
   const RootPage({
@@ -14,8 +14,15 @@ class RootPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(),
+      appBar: CustomAppBar(),
       body: PokemonOverviewPage(items)      
     );
   }
 }
+
+// class CustomAppBar extends AppBar {
+//   @override
+//   Widget build(BuildContext context) {
+//     return AppBar();
+//   }
+// }

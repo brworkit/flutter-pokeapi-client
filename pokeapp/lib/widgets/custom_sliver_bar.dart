@@ -37,7 +37,7 @@ class CustomSliverAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.red,      
-      title: AppBarTitle(),
+      title: CustomAppBar(),
       actions: createAppBarActions(),
     );
   }
