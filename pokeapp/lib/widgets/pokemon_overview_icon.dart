@@ -9,7 +9,7 @@ class PokemonOverviewIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Icon(Icons.favorite, color: Theme.of(context).accentColor,),
+      icon: Icon(Icons.favorite_border, color: Theme.of(context).accentColor,),
       onPressed: () {
         
       },
