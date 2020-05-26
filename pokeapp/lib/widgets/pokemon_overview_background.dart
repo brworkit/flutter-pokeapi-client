@@ -10,6 +10,6 @@ class PokemonOverviewBackground extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(item["image"], fit: BoxFit.cover,);
+    return Image.network(item["image"], fit: BoxFit.contain,);
   }
 }
