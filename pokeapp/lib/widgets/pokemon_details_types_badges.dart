@@ -2,8 +2,8 @@ import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:strcolor/strcolor.dart';
 
-class PokemonOverviewSubtitle extends StatelessWidget {
-  const PokemonOverviewSubtitle({Key key, @required this.item}) : super(key: key);
+class PokemonDetailsTypesBadges extends StatelessWidget {
+  const PokemonDetailsTypesBadges({Key key, @required this.item}) : super(key: key);
 
   final Map<String, dynamic> item;
 
@@ -19,15 +19,16 @@ class PokemonOverviewSubtitle extends StatelessWidget {
       var itemType = itemTypes[index];
       Color badgeColor = itemType["color"]["hex"].toString().color();
       return Container(
+        alignment: Alignment.topRight,
         child: Badge(
-            elevation: 2,
+            elevation: 5,
             shape: BadgeShape.square,
             badgeColor: badgeColor,
             badgeContent: Text(
               itemType["name"],
               style: TextStyle(
                   color: badgeColor.contrast(),
-                  fontSize: 14,
+                  fontSize: 20,
                   fontWeight: FontWeight.bold),
             )),
       );
