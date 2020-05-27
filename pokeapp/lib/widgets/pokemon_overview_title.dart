@@ -7,10 +7,13 @@ class PokemonOverviewTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-        item["name"].toUpperCase(),
-        style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
-        textAlign: TextAlign.center,
-      );
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+          child: Text(
+          item["name"].toUpperCase(),
+          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+    );
   }
 }
