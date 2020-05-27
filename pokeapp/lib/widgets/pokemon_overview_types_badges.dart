@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:pokeapp/extensions/multi_badges.dart';
 import 'package:strcolor/strcolor.dart';
 
 class PokemonOverviewTypesBadges extends StatelessWidget {
@@ -40,30 +41,4 @@ class PokemonOverviewTypesBadges extends StatelessWidget {
   }
 }
 
-class HexaRectangleBadge extends StatelessWidget {
-  const HexaRectangleBadge({
-    Key key,
-    @required this.backgroundColor,
-    @required this.child,
-  }) : super(key: key);
 
-  final Color backgroundColor;
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return ClipOval(
-        clipBehavior: Clip.antiAlias,
-        child: Padding(
-          padding: const EdgeInsets.all(4),
-          child: Container(
-            width: 50,
-            height: 20,
-            color: backgroundColor,
-            child: Center(
-              child: child,
-            ),
-          ),
-        ));
-  }
-}

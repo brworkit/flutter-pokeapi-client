@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'package:pokeapp/extensions/multi_badges.dart';
 import 'package:strcolor/strcolor.dart';
 
 class PokemonDetailsTypesBadges extends StatelessWidget {
@@ -10,28 +11,32 @@ class PokemonDetailsTypesBadges extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      // children: _createChildren(item["types"].reversed.toList()),
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: _createChildren(item["types"]),
     );
   }
 
   List<Widget> _createChildren(List<Map<String, dynamic>> itemTypes) {
     return List<Widget>.generate(itemTypes.length, (int index) {
+
       var itemType = itemTypes[index];
-      Color badgeColor = itemType["color"]["hex"].toString().color();
+      var colorHex = itemType["color"]["hex"].toString();
+      Color backgroundColor = colorHex.color().withOpacity(0.6);
+      
       return Container(
-        alignment: Alignment.topRight,
-        child: Badge(
-            elevation: 5,
-            shape: BadgeShape.square,
-            badgeColor: badgeColor,
-            badgeContent: Text(
-              itemType["name"],
-              style: TextStyle(
-                  color: badgeColor.contrast(),
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold),
-            )),
+        alignment: Alignment.topLeft,
+        child: HexaRectangleBadge(
+          width: 80.0,
+          height: 30.0,
+          child: Text(
+            itemType["name"],
+            style: TextStyle(
+                color: backgroundColor.contrast(),
+                fontSize: 16,
+                fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: backgroundColor,
+        ),
       );
     });
   }
