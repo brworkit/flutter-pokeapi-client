@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokeapp/models/pokemon.dart';
 
 class PokemonOverviewBackground extends StatelessWidget {
   const PokemonOverviewBackground({
@@ -6,10 +7,10 @@ class PokemonOverviewBackground extends StatelessWidget {
     @required this.item,
   }) : super(key: key);
 
-  final Map<String, dynamic> item;
+  final Pokemon item;
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(item["image"], fit: BoxFit.contain,);
+    return Image.network(item.getIcon(), fit: BoxFit.contain,);
   }
 }

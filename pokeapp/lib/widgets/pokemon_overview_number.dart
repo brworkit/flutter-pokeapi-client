@@ -1,11 +1,11 @@
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
 import 'package:pokeapp/extensions/multi_badges.dart';
+import 'package:pokeapp/models/pokemon.dart';
 
 class PokemonOverviewNumber extends StatelessWidget {
   const PokemonOverviewNumber({Key key, @required this.item}) : super(key: key);
 
-  final Map<String, dynamic> item;
+  final Pokemon item;
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,7 @@ class PokemonOverviewNumber extends StatelessWidget {
           width: 30,
           padding: EdgeInsets.all(2),
           child: Text(
-            "#" + item["id"].toString(),
+            "#" + item.getId().toString(),
             textAlign: TextAlign.center,
             
             style: TextStyle(
@@ -39,7 +39,7 @@ class PokemonOverviewNumber extends StatelessWidget {
 // class PokemonOverviewNumber extends StatelessWidget {
 //   const PokemonOverviewNumber({Key key, @required this.item}) : super(key: key);
 
-//   final Map<String, dynamic> item;
+//   final Pokemon item;
 
 //   @override
 //   Widget build(BuildContext context) {

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pokeapp/models/pokemon.dart';
 import 'package:pokeapp/pages/pokemon_detail_page.dart';
 import 'package:pokeapp/widgets/pokemon_details_background.dart';
 import 'package:pokeapp/widgets/pokemon_details_types_badges.dart';
@@ -10,7 +11,7 @@ class PokemonDetailsItemCircle extends StatelessWidget {
   const PokemonDetailsItemCircle({Key key, @required this.item})
       : super(key: key);
 
-  final Map<String, dynamic> item;
+  final Pokemon item;
 
   @override
   Widget build(BuildContext context) {

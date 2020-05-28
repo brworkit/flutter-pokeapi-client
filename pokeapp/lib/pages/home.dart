@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pokeapp/data.dart';
 import 'package:pokeapp/pages/root_page.dart';
-import 'package:pokeapp/providers/pokemons.dart';
-import 'package:provider/provider.dart';
 
 
 class Home extends StatefulWidget {
@@ -17,8 +14,8 @@ class _HomePageState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    final items = Provider.of<Pokemons>(context).items;
-    return RootPage(items: items);
+    
+    return RootPage();
   }
 }
 

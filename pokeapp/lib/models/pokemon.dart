@@ -69,7 +69,7 @@ class Pokemon {
     return result;
   }
 
-  List<Map<String, dynamic>> getMainTypeColor() {
-    return item["types"];
+  String getMainTypeColor() {
+    return item["types"][0]["color"]["name"];
   }
 }

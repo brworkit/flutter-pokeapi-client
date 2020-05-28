@@ -1,11 +1,12 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:pokeapp/models/pokemon.dart';
 
 class PokemonOverviewIcon extends StatelessWidget {
   const PokemonOverviewIcon({Key key, @required this.item})
       : super(key: key);
 
-  final Map<String, dynamic> item;
+  final Pokemon item;
 
   @override
   Widget build(BuildContext context) {
