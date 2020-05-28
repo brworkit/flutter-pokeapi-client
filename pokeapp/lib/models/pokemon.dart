@@ -69,7 +69,7 @@ class Pokemon {
     return result;
   }
 
-  String getMainTypeColor() {
-    return item["types"][0]["color"]["name"];
+  String getMainTypeColor() {    
+    return item["types"][0]["color"]["hex"];
   }
 }
