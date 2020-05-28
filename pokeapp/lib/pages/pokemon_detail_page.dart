@@ -15,10 +15,11 @@ class PokemonDetailPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: backgroundColor,
+        backgroundColor: backgroundColor.withOpacity(0.6),
         actions: <Widget>[],
         // title: Text(this.item["name"].toString().toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: backgroundColor.contrast()),),
       ),
+      
       // body: PokemonDetailsItem(
       //   item: this.item,
       // ),

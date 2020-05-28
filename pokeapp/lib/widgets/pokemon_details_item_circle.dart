@@ -6,6 +6,7 @@ import 'package:pokeapp/widgets/pokemon_details_types_badges.dart';
 import 'package:pokeapp/widgets/pokemon_overview_number.dart';
 import 'package:pokeapp/widgets/pokemon_overview_title.dart';
 import 'package:pokeapp/widgets/pokemon_overview_icon.dart';
+import 'package:strcolor/strcolor.dart';
 
 class PokemonDetailsItemCircle extends StatelessWidget {
   const PokemonDetailsItemCircle({Key key, @required this.item})
@@ -16,6 +17,14 @@ class PokemonDetailsItemCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width * 0.90;
+    // List<Color> colors = item.getTypesColor().reduce((value, element) => return value.toString().color())
+    List<Color> colors = [];
+
+    item.getTypesColor().forEach((element) { colors.add(element.color());});
+
+    if(colors.length == 1) {
+      colors.add((Colors.white));
+    }
     
     return Center(
       child: Container(
@@ -25,17 +34,17 @@ class PokemonDetailsItemCircle extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topRight,
                 end: Alignment.bottomLeft,
-                colors: [Colors.blue, Colors.red])),
+                colors: colors)),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child:  GridTile(
+          child: GridTile(
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => PokemonDetailPage(this.item)));
                 },
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(20.0),
                   child: PokemonDetailsBackground(item: item),
                 ),
               ),
