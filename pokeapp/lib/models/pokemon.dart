@@ -1,49 +1,48 @@
 import 'package:flutter/foundation.dart';
 
 class Pokemon {
-  
   const Pokemon({@required this.item});
 
   final Map<String, dynamic> item;
 
   String getId() {
-    return item["id"];    
+    return item["id"];
   }
 
   String getName() {
-    return item["name"];    
+    return item["name"];
   }
 
   String getOrder() {
-    return item["order"];    
+    return item["order"];
   }
 
   String getWight() {
-    return item["weight"];    
+    return item["weight"];
   }
 
   String getHeight() {
-    return item["height"];    
+    return item["height"];
   }
 
   String getBaseExperience() {
-    return item["base_experience"];    
+    return item["base_experience"];
   }
 
   String getHabilities() {
-    return item["abilities"];    
+    return item["abilities"];
   }
 
   String getIcon() {
-    return item["image"];    
+    return item["image"];
   }
 
   String getImageCover() {
-    return item["imageCover"];    
+    return item["imageCover"];
   }
 
   List<String> getAlbumImages() {
-    return [];    
+    return [];
   }
 
   List<Map<String, dynamic>> getTypes() {
@@ -51,12 +50,24 @@ class Pokemon {
   }
 
   List<Map<String, dynamic>> mainType() {
-    return item["types"];
+    return item["types"][0];
   }
 
-  List<Map<String, dynamic>> getTypesColor() {
-    return item["types"];
-  } 
+  List<String> getTypesColor() {
+    List<String> result = [];
+    for (var item in item["types"]) {
+      result.add(item["color"]["hex"]);
+    }
+    return result;
+  }
+
+  List<String> getTypesName() {
+    List<String> result = [];
+    for (var item in item["types"]) {
+      result.add(item["name"]);
+    }
+    return result;
+  }
 
   List<Map<String, dynamic>> getMainTypeColor() {
     return item["types"];
