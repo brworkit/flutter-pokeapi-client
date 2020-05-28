@@ -6,7 +6,7 @@ class Pokemon {
   final Map<String, dynamic> item;
 
   String getId() {
-    return item["id"];
+    return item["id"].toString();
   }
 
   String getName() {
@@ -14,19 +14,19 @@ class Pokemon {
   }
 
   String getOrder() {
-    return item["order"];
+    return item["order"].toString();
   }
 
   String getWight() {
-    return item["weight"];
+    return item["weight"].toString();
   }
 
   String getHeight() {
-    return item["height"];
+    return item["height"].toString();
   }
 
   String getBaseExperience() {
-    return item["base_experience"];
+    return item["base_experience"].toString();
   }
 
   String getHabilities() {
