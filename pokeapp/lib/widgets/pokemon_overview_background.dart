@@ -10,7 +10,7 @@ class PokemonOverviewBackground extends StatelessWidget {
   final Pokemon item;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return Image.network(item.getIcon(), fit: BoxFit.contain,);
   }
 }
