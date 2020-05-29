@@ -15,22 +15,16 @@ class PokemonDetailsItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
-      // color: this.item["types"][0]["color"].toString().color(),
+      elevation: 5,      
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ClipRRect(                    
           child: GridTile(      
-            child: GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => PokemonDetailPage(this.item)));
-              },
-              child: Padding(
+            child: 
+            Padding(
                 padding: const EdgeInsets.all(4.0),
                 child: PokemonDetailsBackground(item: item),
-              ),
-            ),
+              ),            
             header: GridTileBar(
               title: PokemonDetailsTypesBadges(item: this.item),
             ),

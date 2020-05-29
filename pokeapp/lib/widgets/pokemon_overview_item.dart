@@ -19,8 +19,8 @@ class PokemonOverviewItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) => PokemonDetailPage(this.item)));
+            // Navigator.of(context).push(MaterialPageRoute(
+            //     builder: (context) => PokemonDetailPage(this.item)));
           },
           child: Padding(
             padding: const EdgeInsets.all(12.0),

@@ -1,33 +1,85 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/models/pokemon.dart';
+import 'package:pokeapp/providers/pokemons.dart';
 import 'package:pokeapp/widgets/pokemon_details_item_circle.dart';
+import 'package:provider/provider.dart';
 import 'package:strcolor/strcolor.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
-class PokemonDetailPage extends StatelessWidget {
+class PokemonDetailPage extends StatefulWidget {
+  int index;
+
+  PokemonDetailPage(this.index);
+
+  @override
+  _PokemonDetailPageState createState() => _PokemonDetailPageState(this.index);
+}
+
+class _PokemonDetailPageState extends State<PokemonDetailPage> {
+  CarouselController carouselController = CarouselController();
+  Color backgroundColor;
+  int index;
   
-  final Pokemon item;
+  _PokemonDetailPageState(this.index) {
+    // setCenterPokemon(this.index);
+  }
 
-  PokemonDetailPage(this.item);
+  onPageChanged(int index, CarouselPageChangedReason reason) {
+    print("index: ${index}");
+    print("reason: ${reason}");
+    setState(() {
+        this.index = index;
+    }); 
+
+    // setCenterPokemon(index);
+  }
+
+  setCenterPokemon(context, index) {
+    List<Pokemon> items = Provider.of<Pokemons>(context).items;
+
+    
+
+    setState(() {
+      var item = items[index];
+      print("item: ${item}");
+      this.backgroundColor = item.getMainTypeColor().color();      
+
+    });        
+  }
+
 
   @override
   Widget build(BuildContext context) {
-    Color backgroundColor = this.item.getMainTypeColor().color();
+    List<Pokemon> items = Provider.of<Pokemons>(context).items;    
+    setCenterPokemon(context, this.index);
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: backgroundColor.withOpacity(0.6),
-        actions: <Widget>[],
-        // title: Text(this.item["name"].toString().toUpperCase(), style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800, color: backgroundColor.contrast()),),
+        backgroundColor: backgroundColor.withOpacity(0.7),
+        actions: <Widget>[],        
       ),
-      
-      // body: PokemonDetailsItem(
-      //   item: this.item,
-      // ),
-      body: PokemonDetailsItemCircle(
-        item: this.item,
+      body: Container(
+        color: backgroundColor.withOpacity(0.1),
+        child: Center(
+          child: CarouselSlider.builder(
+            itemCount: items.length,
+            carouselController: carouselController,
+            itemBuilder: (BuildContext context, int itemIndex) {          
+              return PokemonDetailsItemCircle(
+                item: items[itemIndex],
+              );
+            },
+            options: CarouselOptions(
+                autoPlay: false,
+                enlargeCenterPage: true,
+                aspectRatio: 1.0,
+                initialPage: index,
+                enableInfiniteScroll: false,
+                onPageChanged: onPageChanged),
+          ),
+        ),
       ),
-
-      
     );
   }
 }
