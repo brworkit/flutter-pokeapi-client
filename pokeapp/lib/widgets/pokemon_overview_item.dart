@@ -8,7 +8,9 @@ import 'package:pokeapp/widgets/pokemon_overview_title.dart';
 import 'package:pokeapp/widgets/pokemon_overview_icon.dart';
 
 class PokemonOverviewItem extends StatelessWidget {
-  const PokemonOverviewItem({Key key, @required this.item}) : super(key: key);
+  final index;
+
+  const PokemonOverviewItem({Key key, @required this.item, this.index}) : super(key: key);
 
   final Pokemon item;
 
@@ -19,8 +21,8 @@ class PokemonOverviewItem extends StatelessWidget {
       child: GridTile(
         child: GestureDetector(
           onTap: () {
-            // Navigator.of(context).push(MaterialPageRoute(
-            //     builder: (context) => PokemonDetailPage(this.item)));
+            Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => PokemonDetailPage(this.index)));
           },
           child: Padding(
             padding: const EdgeInsets.all(12.0),

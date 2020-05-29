@@ -30,15 +30,12 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
     setState(() {
         this.index = index;
     }); 
-
-    // setCenterPokemon(index);
   }
 
   setCenterPokemon(context, index) {
     List<Pokemon> items = Provider.of<Pokemons>(context).items;
 
     
-
     setState(() {
       var item = items[index];
       print("item: ${item}");
@@ -60,24 +57,23 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
         actions: <Widget>[],        
       ),
       body: Container(
+        height: double.infinity,
         color: backgroundColor.withOpacity(0.1),
-        child: Center(
-          child: CarouselSlider.builder(
-            itemCount: items.length,
-            carouselController: carouselController,
-            itemBuilder: (BuildContext context, int itemIndex) {          
-              return PokemonDetailsItemCircle(
-                item: items[itemIndex],
-              );
-            },
-            options: CarouselOptions(
-                autoPlay: false,
-                enlargeCenterPage: true,
-                aspectRatio: 1.0,
-                initialPage: index,
-                enableInfiniteScroll: false,
-                onPageChanged: onPageChanged),
-          ),
+        child: CarouselSlider.builder(
+          itemCount: items.length,
+          carouselController: carouselController,
+          itemBuilder: (BuildContext context, int itemIndex) {          
+            return PokemonDetailsItemCircle(
+              item: items[itemIndex],
+            );
+          },
+          options: CarouselOptions(
+              autoPlay: false,
+              enlargeCenterPage: true,
+              aspectRatio: 1.0,
+              initialPage: index,
+              enableInfiniteScroll: false,
+              onPageChanged: onPageChanged),
         ),
       ),
     );

@@ -14,7 +14,7 @@ class PokemonDetailsItemCircle extends StatelessWidget {
 
   final Pokemon item;
 
-@override
+  @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width * 0.5;
     // List<Color> colors = item.getTypesColor().reduce((value, element) => return value.toString().color())
@@ -28,139 +28,125 @@ class PokemonDetailsItemCircle extends StatelessWidget {
       colors.add((Colors.white));
     }
 
+    return CarrouselHeader(item: item, width: width, colors: colors);
+  }
+}
 
-    // "name": "bulbasaur",
-    // "weight": 69,
-    // "height": 7,
-    // "base_experience": 64,
+class CarrouselHeader extends StatelessWidget {
+  const CarrouselHeader({
+    Key key,
+    @required this.item,
+    @required this.width,
+    @required this.colors,
+  }) : super(key: key);
 
+  final Pokemon item;
+  final double width;
+  final List<Color> colors;
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Column(
               children: <Widget>[
-                Text(item.getName().toUpperCase(), style: TextStyle(fontFamily: "Anton", fontSize: 26, color: Colors.black45),),                
+                Text(
+                  item.getName().toUpperCase(),
+                  style: TextStyle(
+                      fontFamily: "Anton", fontSize: 32, color: Colors.black54),
+                ),
               ],
-            ),            
+            ),
           ],
-        ), 
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Column(
               children: <Widget>[
-                Text(item.getOrder(), style: TextStyle(fontFamily: "Anton", fontSize: 18, color: Colors.black54, fontWeight: FontWeight.bold),),                
-                Text("ORDER", style: TextStyle(fontSize: 14, color: Colors.black45),),                
+                Text(
+                  item.getOrder(),
+                  style: TextStyle(
+                      fontFamily: "Anton",
+                      fontSize: 18,
+                      color: Colors.black45,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "ORDER",
+                  style: TextStyle(fontSize: 14, color: Colors.black45),
+                ),
               ],
             ),
             Column(
               children: <Widget>[
-                Text(item.getBaseExperience(), style: TextStyle(fontFamily: "Anton", fontSize: 18, color: Colors.black54, fontWeight: FontWeight.bold),),                
-                Text("BASE EXP", style: TextStyle(fontSize: 14, color: Colors.black45),),                
+                Text(
+                  item.getBaseExperience(),
+                  style: TextStyle(
+                      fontFamily: "Anton",
+                      fontSize: 18,
+                      color: Colors.black45,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "BASE EXP",
+                  style: TextStyle(fontSize: 14, color: Colors.black45),
+                ),
               ],
             ),
-                        
           ],
         ),
         Container(
-          width: width,
-          decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                  begin: Alignment.topRight,
-                  end: Alignment.bottomLeft,
-                  colors: colors)),
-          child: PokemonDetailsBackground(item: item)
-        ),
+            width: width,
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: colors)),
+            child: PokemonDetailsBackground(item: item)),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             Column(
               children: <Widget>[
-                Text(item.getWight(), style: TextStyle(fontFamily: "Anton", fontSize: 18, color: Colors.black54, fontWeight: FontWeight.bold),),                
-                Text("WEIGHT", style: TextStyle(fontSize: 14, color: Colors.black45),),                
+                Text(
+                  item.getWight(),
+                  style: TextStyle(
+                      fontFamily: "Anton",
+                      fontSize: 18,
+                      color: Colors.black45,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "WEIGHT",
+                  style: TextStyle(fontSize: 14, color: Colors.black45),
+                ),
               ],
             ),
             Column(
               children: <Widget>[
-                Text(item.getHeight(), style: TextStyle(fontFamily: "Anton", fontSize: 18, color: Colors.black54, fontWeight: FontWeight.bold),),                
-                Text("HEIGHT", style: TextStyle(fontSize: 14, color: Colors.black45),),                
+                Text(
+                  item.getHeight(),
+                  style: TextStyle(
+                      fontFamily: "Anton",
+                      fontSize: 18,
+                      color: Colors.black45,
+                      fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  "HEIGHT",
+                  style: TextStyle(fontSize: 14, color: Colors.black45),
+                ),
               ],
-            ),            
+            ),
           ],
         ),
       ],
     );
-    
-    // return Row(
-    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //   children: <Widget>[
-    //     Text("HP"), 
-    //     Container(
-    //       width: width,
-    //       decoration: BoxDecoration(
-    //           shape: BoxShape.circle,
-    //           gradient: LinearGradient(
-    //               begin: Alignment.topRight,
-    //               end: Alignment.bottomLeft,
-    //               colors: colors)),
-    //       child: PokemonDetailsBackground(item: item)
-    //     ),
-    //     Column(
-    //       children: <Widget>[
-    //         Text(item.getHeight()),
-    //         Text("HEIGHT"),
-    //       ],
-    //     ),
-    //   ],
-    // );
-
-
-
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   final double width = MediaQuery.of(context).size.width * 0.90;
-  //   // List<Color> colors = item.getTypesColor().reduce((value, element) => return value.toString().color())
-  //   List<Color> colors = [];
-
-  //   item.getTypesColor().forEach((element) {
-  //     colors.add(element.color());
-  //   });
-
-  //   if (colors.length == 1) {
-  //     colors.add((Colors.white));
-  //   }
-
-  //   return Container(
-  //     width: width,
-  //     decoration: BoxDecoration(
-  //         shape: BoxShape.circle,
-  //         gradient: LinearGradient(
-  //             begin: Alignment.topRight,
-  //             end: Alignment.bottomLeft,
-  //             colors: colors)),
-  //     child: Padding(
-  //       padding: const EdgeInsets.all(8.0),
-  //       child: GridTile(
-  //         child: Padding(
-  //           padding: const EdgeInsets.all(20.0),
-  //           child: PokemonDetailsBackground(item: item),
-  //         ),
-  //         header: GridTileBar(
-  //           title: PokemonDetailsTypesBadges(item: this.item),
-  //         ),
-  //         footer: GridTileBar(
-  //           backgroundColor: Colors.black38,
-  //           leading: PokemonOverviewNumber(item: this.item),
-  //           title: PokemonOverviewTitle(item: this.item),
-  //           trailing: PokemonOverviewIcon(item: this.item),
-  //         ),
-  //       ),
-  //     ),
-  //   );
   }
 }

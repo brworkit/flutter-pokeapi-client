@@ -16,12 +16,15 @@ class PokemonsGrid extends StatelessWidget {
       padding: EdgeInsets.all(8.0),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => PokemonDetailPage(index)));
-            },
-            child: PokemonOverviewItem(item: items[index]));
+        return PokemonOverviewItem(item: items[index], index: index,);
+        // return GestureDetector(
+        //     onTap: () {
+        //       print("onTap");
+
+        //       Navigator.of(context).push(MaterialPageRoute(
+        //           builder: (context) => PokemonDetailPage(index)));
+        //     },
+        //     child: PokemonOverviewItem(item: items[index]));
       },
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
