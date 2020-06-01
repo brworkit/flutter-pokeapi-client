@@ -1,6 +1,7 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:pokeapp/models/pokemon.dart';
+import 'package:strcolor/strcolor.dart';
 
 class PokemonOverviewIcon extends StatelessWidget {
   const PokemonOverviewIcon({Key key, @required this.item})
@@ -11,7 +12,7 @@ class PokemonOverviewIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Icon(Icons.favorite_border, color: Theme.of(context).accentColor,),
+      icon: Icon(Icons.mic, color: Colors.white,),
       onPressed: () {
           // play();
       },

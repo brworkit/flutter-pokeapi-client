@@ -33,7 +33,7 @@ class PokemonOverviewItem extends StatelessWidget {
           title: PokemonOverviewTypesBadges(item: this.item),
         ),
         footer: GridTileBar(
-          backgroundColor: Colors.black38,
+          backgroundColor: Colors.black26,
           leading: PokemonOverviewNumber(item: this.item),
           title: PokemonOverviewTitle(item: this.item),
           trailing: PokemonOverviewIcon(item: this.item),
