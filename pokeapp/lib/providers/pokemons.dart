@@ -6,16 +6,7 @@ import 'package:pokeapp/models/pokemon.dart';
 class Pokemons with ChangeNotifier {
   List<Pokemon> _items = [];
 
-  Pokemons() {
-    // const response = Api.instance.getAllPokemons();
-
-    // for (var item in response) {
-    //   _items.add(Pokemon(item: item));
-    // }
-
-    // for (var item in POKEMON_DATA) {
-    //   _items.add(Pokemon(item: item));
-    // }
+  Pokemons() {    
     downloadData();
   }
 
