@@ -27,6 +27,7 @@ class Pokemons with ChangeNotifier {
       _items.add(Pokemon(item: item));
     }
 
+    notifyListeners();
   }
 
   List<Pokemon> get items {
@@ -35,6 +36,6 @@ class Pokemons with ChangeNotifier {
 
   void addProduct(Map<String, dynamic> item) {
     _items.add(Pokemon(item: item));
-    notifyListeners();
+    
   }
 }
