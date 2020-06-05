@@ -10,13 +10,15 @@ class Api {
   Future<List<Map<String, dynamic>>> getAllPokemons() async {
     print("API getAllPokemons");
 
-    // final response = await http.get('https://futvarzea-api-server.herokuapp.com/futvarzea/teams',
-    //    headers: {'Content-Type': 'application/json'},
-    // );
+    final response = await http.get('https://pokebattle-api-hml.herokuapp.com/pokebattle/v1/pokemons?from=1&to=150',
+       headers: {'Content-Type': 'application/json'},
+    );
 
-    // print("response: " + response.toString());
-    // print("response statusCode: " + response.statusCode.toString());
+    print("response: " + response.toString());
+    print("response statusCode: " + response.statusCode.toString());
+    List<Map<String, dynamic>> res = List.castFrom(json.decode(response.body)["result"]);
+    return res;
     // return List.castFrom(json.decode(response.body)["result"]);
-    return POKEMON_DATA;
+    // return POKEMON_DATA;
   }
 }

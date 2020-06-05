@@ -20,7 +20,7 @@ class Pokemons with ChangeNotifier {
   }
 
   Future<void> downloadData() async {
-    List<Map<String, dynamic>> response = await Api.instance.getAllPokemons();
+    var response = await Api.instance.getAllPokemons();
     print("response: ${response}");
     
     for (var item in response) {
