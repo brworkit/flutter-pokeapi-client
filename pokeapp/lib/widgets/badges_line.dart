@@ -3,16 +3,16 @@ import 'package:pokeapp/extensions/multi_badges.dart';
 import 'package:pokeapp/models/pokemon.dart';
 import 'package:strcolor/strcolor.dart';
 
-class PokemonOverviewTypesBadges extends StatelessWidget {
+class BadgesLine extends StatelessWidget {
   
-  const PokemonOverviewTypesBadges(
+  const BadgesLine(
       {Key key,
       @required this.item,      
       this.fontSize = 10,
       this.badgeWidth = 50.0,
       this.textColor,
       this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
-      this.fontFamily = "Lato"})
+      this.fontFamily = "Lato",})
       : super(key: key);
 
   final Pokemon item;  
@@ -43,9 +43,9 @@ class PokemonOverviewTypesBadges extends StatelessWidget {
             itemType["name"].toString().toUpperCase(),
             style: TextStyle(
                 fontFamily: fontFamily,                
-                color: Colors.grey[100],
+                color: this.textColor != null ? this.textColor : Colors.grey[100],
                 fontSize: fontSize,
-                fontWeight: FontWeight.w900),
+                fontWeight: FontWeight.w900,),
           ),
           backgroundColor: backgroundColor,
         ),

@@ -11,15 +11,21 @@ class PokemonsGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Pokemon> items = Provider.of<Pokemons>(context).items;
 
-    if(items.isEmpty) {
-      return Center(child: CircularProgressIndicator(backgroundColor: Colors.red,));
+    if (items.isEmpty) {
+      return Center(
+          child: CircularProgressIndicator(
+        backgroundColor: Colors.red,
+      ));
     }
 
     return GridView.builder(
       padding: EdgeInsets.all(8.0),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return PokemonOverviewItem(item: items[index], index: index,);        
+        return PokemonOverviewItem(
+          item: items[index],
+          index: index,
+        );
       },
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,

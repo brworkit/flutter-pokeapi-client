@@ -41,6 +41,7 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
   @override
   Widget build(BuildContext context) {
     List<Pokemon> items = Provider.of<Pokemons>(context).items;
+    
     setCenterPokemon(context, this.index);
 
     return Scaffold(
@@ -70,13 +71,14 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
             );
           },
           options: CarouselOptions(
-              height: MediaQuery.of(context).size.height * 0.80,
-              autoPlay: false,
-              enlargeCenterPage: true,
-              aspectRatio: 1.0,
-              initialPage: index,
-              enableInfiniteScroll: false,
-              onPageChanged: onPageChanged),
+            height: MediaQuery.of(context).size.height * 0.80,
+            autoPlay: false,
+            enlargeCenterPage: true,
+            aspectRatio: 1.0,
+            initialPage: index,
+            enableInfiniteScroll: false,
+            onPageChanged: onPageChanged,
+          ),
         ),
       ),
     );

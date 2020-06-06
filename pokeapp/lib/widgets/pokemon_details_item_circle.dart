@@ -40,20 +40,19 @@ class CarrouselHeader extends StatelessWidget {
 
     return Center(
       child: Card(
-        elevation: 10,                
+        elevation: 10,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(30.0),
         ),
         color: cardColor,
         shadowColor: colors[0],
         child: Center(
-          child: Container(                     
+          child: Container(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
-                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
@@ -73,95 +72,48 @@ class CarrouselHeader extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            item.getOrder(),
-                            style: TextStyle(
-                                fontFamily: "Anton",
-                                fontSize: 18,
-                                color: textColor,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            "ORDER",
-                            style: TextStyle(fontSize: 14, color: textColor),
-                          ),
-                        ],
+                      StatsHolder(
+                        title: item.getOrder(),
+                        subtitle: "ORDER",
                       ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            item.getBaseExperience(),
-                            style: TextStyle(
-                                fontFamily: "Anton",
-                                fontSize: 18,
-                                color: textColor,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            "BASE EXP",
-                            style: TextStyle(fontSize: 14, color: textColor),
-                          ),
-                        ],
+                      StatsHolder(
+                        title: item.getBaseExperience(),
+                        subtitle: "BASE EXP",
                       ),
                     ],
-                  ),                  
+                  ),
                   Container(
                       width: width,
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           gradient: LinearGradient(
-                              begin: Alignment.topRight,
-                              end: Alignment.bottomLeft,
-                              colors: colors)),
-                      child: PokemonDetailsBackground(item: item)),
+                            begin: Alignment.topRight,
+                            end: Alignment.bottomLeft,
+                            colors: colors,
+                          )),
+                      child: PokemonDetailsBackground(
+                        item: item,
+                      )),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            item.getWight(),
-                            style: TextStyle(
-                                fontFamily: "Anton",
-                                fontSize: 18,
-                                color: textColor,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            "WEIGHT",
-                            style: TextStyle(fontSize: 14, color: textColor),
-                          ),
-                        ],
+                      StatsHolder(
+                        title: item.getWeight(),
+                        subtitle: "WEIGHT",
                       ),
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            item.getHeight(),
-                            style: TextStyle(
-                                fontFamily: "Anton",
-                                fontSize: 18,
-                                color: textColor,
-                                fontWeight: FontWeight.bold),
-                          ),
-                          Text(
-                            "HEIGHT",
-                            style: TextStyle(fontSize: 14, color: textColor),
-                          ),
-                        ],
+                      StatsHolder(
+                        title: item.getHeight(),
+                        subtitle: "HEIGHT",
                       ),
                     ],
                   ),
                   Divider(
                     height: 10,
                   ),
-                  PokemonOverviewTypesBadges(
-                    item: item,                    
+                  BadgesLine(
+                    item: item,
                     mainAxisAlignment: MainAxisAlignment.center,
                     fontSize: 12,
-                    // fontFamily: "Anton",
-                    // textColor: Colors.grey[300],
                     textColor: Colors.grey[100],
                     badgeWidth: 70.0,
                   ),
@@ -171,6 +123,53 @@ class CarrouselHeader extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class StatsHolder extends StatelessWidget {
+  const StatsHolder(
+      {Key key,
+      @required this.title,
+      this.titleFontSize = 18.0,
+      this.titleTextColor,
+      @required this.subtitle,
+      this.subtitleFontSize = 14.0,
+      this.subtitleTextColor})
+      : super(key: key);
+
+  final title;
+  final subtitle;
+  final Color titleTextColor;
+  final Color subtitleTextColor;
+  final titleFontSize;
+  final subtitleFontSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Text(
+          title,
+          style: TextStyle(
+            fontFamily: "Anton",
+            fontSize: titleFontSize,
+            color: this.titleTextColor != null
+                ? this.titleTextColor
+                : Colors.grey[600],
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          subtitle,
+          style: TextStyle(
+            fontSize: subtitleFontSize,
+            color: this.subtitleTextColor != null
+                ? this.subtitleTextColor
+                : Colors.grey[600],
+          ),
+        ),
+      ],
     );
   }
 }

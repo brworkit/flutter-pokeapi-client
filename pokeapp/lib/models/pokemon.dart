@@ -17,7 +17,7 @@ class Pokemon {
     return item["order"].toString();
   }
 
-  String getWight() {
+  String getWeight() {
     return item["weight"].toString();
   }
 
