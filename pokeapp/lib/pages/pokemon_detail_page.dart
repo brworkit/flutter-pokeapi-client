@@ -18,6 +18,7 @@ class PokemonDetailPage extends StatefulWidget {
 class _PokemonDetailPageState extends State<PokemonDetailPage> {
   CarouselController carouselController = CarouselController();
   Color backgroundColor;
+  String title;
   int index;
   
   _PokemonDetailPageState(this.index) {
@@ -32,14 +33,12 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
 
   setCenterPokemon(context, index) {
     List<Pokemon> items = Provider.of<Pokemons>(context).items;
-
-    
     setState(() {
       var item = items[index];      
-      this.backgroundColor = item.getMainTypeColor().color();      
+      this.backgroundColor = item.getMainTypeColor().color();
+      this.title = item.getId();      
     });        
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +49,8 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: backgroundColor.withOpacity(0.7),
-        actions: <Widget>[],        
+        title: Text("#${this.title}", style: TextStyle(fontFamily: "Anton"),),
+        actions: <Widget>[Icon(Icons.favorite_border)],        
       ),
       body: Container(            
         height: double.infinity,

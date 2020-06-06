@@ -10,11 +10,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomePageState extends State<Home> {
-  // final List<Map<String, dynamic>> items = POKEMONS;
-
   @override
-  Widget build(BuildContext context) {
-    
+  Widget build(BuildContext context) {    
     return RootPage();
   }
 }

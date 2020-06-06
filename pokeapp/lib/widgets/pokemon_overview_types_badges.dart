@@ -22,7 +22,6 @@ class PokemonOverviewTypesBadges extends StatelessWidget {
   final fontFamily;
   final mainAxisAlignment;
   
-
   @override
   Widget build(BuildContext context) {
     return Row(
