@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:pokeapp/api/api.dart';
-import 'package:pokeapp/data.dart';
 import 'package:pokeapp/models/pokemon.dart';
 
 class Pokemons with ChangeNotifier {
@@ -12,7 +11,6 @@ class Pokemons with ChangeNotifier {
 
   Future<void> downloadData() async {
     var response = await Api.instance.getAllPokemons();
-    print("response: ${response}");
     
     for (var item in response) {
       _items.add(Pokemon(item: item));

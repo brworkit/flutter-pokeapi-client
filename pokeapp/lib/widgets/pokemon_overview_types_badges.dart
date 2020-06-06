@@ -4,15 +4,18 @@ import 'package:pokeapp/models/pokemon.dart';
 import 'package:strcolor/strcolor.dart';
 
 class PokemonOverviewTypesBadges extends StatelessWidget {
-  const PokemonOverviewTypesBadges({Key key, @required this.item})
+  
+
+  const PokemonOverviewTypesBadges({Key key, @required this.item, this.mainAxisAlignment=MainAxisAlignment.spaceBetween})
       : super(key: key);
 
   final Pokemon item;
+  final mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: mainAxisAlignment,
       children: _createChildren(item.getTypes()),
     );
   }

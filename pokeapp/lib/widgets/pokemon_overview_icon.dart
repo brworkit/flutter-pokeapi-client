@@ -1,7 +1,6 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:pokeapp/models/pokemon.dart';
-import 'package:strcolor/strcolor.dart';
 
 class PokemonOverviewIcon extends StatelessWidget {
   const PokemonOverviewIcon({Key key, @required this.item})

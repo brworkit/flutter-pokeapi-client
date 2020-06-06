@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/models/pokemon.dart';
-import 'package:pokeapp/pages/pokemon_detail_page.dart';
 import 'package:pokeapp/providers/pokemons.dart';
 import 'package:pokeapp/widgets/pokemon_overview_item.dart';
 import 'package:provider/provider.dart';

@@ -7,7 +7,7 @@ import 'package:strcolor/strcolor.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class PokemonDetailPage extends StatefulWidget {
-  int index;
+  final int index;
 
   PokemonDetailPage(this.index);
 
@@ -21,12 +21,10 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
   int index;
   
   _PokemonDetailPageState(this.index) {
-    // setCenterPokemon(this.index);
+    
   }
 
-  onPageChanged(int index, CarouselPageChangedReason reason) {
-    print("index: ${index}");
-    print("reason: ${reason}");
+  onPageChanged(int index, CarouselPageChangedReason reason) {    
     setState(() {
         this.index = index;
     }); 
@@ -37,10 +35,8 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
 
     
     setState(() {
-      var item = items[index];
-      print("item: ${item}");
+      var item = items[index];      
       this.backgroundColor = item.getMainTypeColor().color();      
-
     });        
   }
 
