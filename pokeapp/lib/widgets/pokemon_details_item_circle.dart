@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/models/pokemon.dart';
-import 'package:pokeapp/widgets/pokemon_details_background.dart';
-import 'package:pokeapp/widgets/pokemon_overview_types_badges.dart';
+import 'package:pokeapp/widgets/details_background_image.dart';
+import 'package:pokeapp/widgets/badges_line.dart';
 import 'package:strcolor/strcolor.dart';
 
 class PokemonDetailsItemCircle extends StatelessWidget {

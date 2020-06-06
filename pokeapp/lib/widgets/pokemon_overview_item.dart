@@ -3,7 +3,7 @@ import 'package:pokeapp/models/pokemon.dart';
 import 'package:pokeapp/pages/pokemon_detail_page.dart';
 import 'package:pokeapp/widgets/pokemon_overview_background.dart';
 import 'package:pokeapp/widgets/pokemon_overview_number.dart';
-import 'package:pokeapp/widgets/pokemon_overview_types_badges.dart';
+import 'package:pokeapp/widgets/badges_line.dart';
 import 'package:pokeapp/widgets/pokemon_overview_title.dart';
 import 'package:pokeapp/widgets/pokemon_overview_icon.dart';
 

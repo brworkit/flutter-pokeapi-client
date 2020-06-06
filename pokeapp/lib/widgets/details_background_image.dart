@@ -10,8 +10,6 @@ class PokemonDetailsBackground extends StatelessWidget {
 
   final Pokemon item;
 
-  
-
   @override
   Widget build(BuildContext context) {
     return Image.network(
