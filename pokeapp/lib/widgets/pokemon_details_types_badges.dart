@@ -16,7 +16,8 @@ class PokemonDetailsTypesBadges extends StatelessWidget {
     );
   }
 
-  List<Widget> _createChildren(List<Map<String, dynamic>> items) {
+  // List<Widget> _createChildren(List<Map<String, dynamic>> items) {
+    List<Widget> _createChildren(List<dynamic> items) {
     return List<Widget>.generate(items.length, (int index) {
 
       var itemType = items[index];

@@ -15,10 +15,7 @@ class Api {
     );
 
     print("response: " + response.toString());
-    print("response statusCode: " + response.statusCode.toString());
-    List<Map<String, dynamic>> res = List.castFrom(json.decode(response.body)["result"]);
-    return res;
-    // return List.castFrom(json.decode(response.body)["result"]);
-    // return POKEMON_DATA;
+    print("response statusCode: " + response.statusCode.toString());    
+    return List.castFrom(json.decode(response.body)["result"]);
   }
 }

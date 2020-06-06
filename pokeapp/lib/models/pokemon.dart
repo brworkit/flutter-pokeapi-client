@@ -45,11 +45,11 @@ class Pokemon {
     return [];
   }
 
-  List<Map<String, dynamic>> getTypes() {
+  List<dynamic> getTypes() {
     return item["types"];
   }
 
-  List<Map<String, dynamic>> mainType() {
+  List<dynamic> mainType() {
     return item["types"][0];
   }
 

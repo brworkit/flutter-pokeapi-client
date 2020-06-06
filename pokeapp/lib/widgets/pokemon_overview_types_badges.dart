@@ -11,19 +11,18 @@ class PokemonOverviewTypesBadges extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(      
+    return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: _createChildren(item.getTypes()),
     );
   }
 
-  List<Widget> _createChildren(List<Map<String, dynamic>> items) {
+  List<Widget> _createChildren(List<dynamic> items) {
     return List<Widget>.generate(items.length, (int index) {
-
       var itemType = items[index];
       var colorHex = itemType["color"]["hex"].toString();
       Color backgroundColor = colorHex.color().withOpacity(0.6);
-      
+
       return Container(
         alignment: Alignment.topLeft,
         child: HexaRectangleBadge(
@@ -40,5 +39,3 @@ class PokemonOverviewTypesBadges extends StatelessWidget {
     });
   }
 }
-
-
