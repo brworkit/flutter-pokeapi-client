@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/pages/root_page.dart';
 
-
 class Home extends StatefulWidget {
   Home({Key key, this.title}) : super(key: key);
   final String title;
@@ -11,9 +10,7 @@ class Home extends StatefulWidget {
 
 class _HomePageState extends State<Home> {
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
     return RootPage();
   }
 }
-
-

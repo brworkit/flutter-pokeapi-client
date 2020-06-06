@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 
 class HexaRectangleBadge extends StatelessWidget {
   const HexaRectangleBadge(
-      {Key key,      
+      {Key key,
       @required this.child,
       this.padding = const EdgeInsets.all(4),
       this.backgroundColor = Colors.transparent,

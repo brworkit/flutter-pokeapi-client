@@ -10,7 +10,8 @@ import 'package:pokeapp/widgets/pokemon_overview_icon.dart';
 class PokemonOverviewItem extends StatelessWidget {
   final index;
 
-  const PokemonOverviewItem({Key key, @required this.item, this.index}) : super(key: key);
+  const PokemonOverviewItem({Key key, @required this.item, this.index})
+      : super(key: key);
 
   final Pokemon item;
 

@@ -61,9 +61,10 @@ class CarrouselHeader extends StatelessWidget {
                           Text(
                             item.getName().toUpperCase(),
                             style: TextStyle(
-                                fontFamily: "Anton",
-                                fontSize: 32,
-                                color: textColor),
+                              fontFamily: "Anton",
+                              fontSize: 32,
+                              color: textColor,
+                            ),
                           ),
                         ],
                       ),
@@ -83,17 +84,18 @@ class CarrouselHeader extends StatelessWidget {
                     ],
                   ),
                   Container(
-                      width: width,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          gradient: LinearGradient(
-                            begin: Alignment.topRight,
-                            end: Alignment.bottomLeft,
-                            colors: colors,
-                          )),
-                      child: PokemonDetailsBackground(
-                        item: item,
-                      )),
+                    width: width,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        gradient: LinearGradient(
+                          begin: Alignment.topRight,
+                          end: Alignment.bottomLeft,
+                          colors: colors,
+                        )),
+                    child: PokemonDetailsBackground(
+                      item: item,
+                    ),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: <Widget>[

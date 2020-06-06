@@ -5,13 +5,13 @@ import 'package:pokeapp/models/pokemon.dart';
 class Pokemons with ChangeNotifier {
   List<Pokemon> _items = [];
 
-  Pokemons() {    
+  Pokemons() {
     downloadData();
   }
 
   Future<void> downloadData() async {
     var response = await Api.instance.getAllPokemons();
-    
+
     for (var item in response) {
       _items.add(Pokemon(item: item));
     }
@@ -25,6 +25,5 @@ class Pokemons with ChangeNotifier {
 
   void addProduct(Map<String, dynamic> item) {
     _items.add(Pokemon(item: item));
-    
   }
 }

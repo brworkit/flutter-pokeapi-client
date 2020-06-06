@@ -11,19 +11,18 @@ class PokemonOverviewBackground extends StatelessWidget {
   final Pokemon item;
 
   @override
-  Widget build(BuildContext context) {        
+  Widget build(BuildContext context) {
     return Image.network(
       item.getIcon(),
       loadingBuilder: (BuildContext context, Widget child,
           ImageChunkEvent loadingProgress) {
-            
         if (loadingProgress == null) {
           return child;
         }
-        
+
         return Center(
           child: CircularProgressIndicator(
-            backgroundColor: item.getMainTypeColor().color(),            
+            backgroundColor: item.getMainTypeColor().color(),
             value: loadingProgress.expectedTotalBytes != null
                 ? loadingProgress.cumulativeBytesLoaded /
                     loadingProgress.expectedTotalBytes

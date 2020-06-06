@@ -16,15 +16,14 @@ class PokemonDetailsBackground extends StatelessWidget {
       item.getImageCover(),
       loadingBuilder: (BuildContext context, Widget child,
           ImageChunkEvent loadingProgress) {
-        
         if (loadingProgress == null) {
           return child;
         }
-        
-        return Container(          
+
+        return Container(
           child: Center(
-            child: CircularProgressIndicator(              
-              backgroundColor: item.getMainTypeColor().color(),                          
+            child: CircularProgressIndicator(
+              backgroundColor: item.getMainTypeColor().color(),
               value: loadingProgress.expectedTotalBytes != null
                   ? loadingProgress.cumulativeBytesLoaded /
                       loadingProgress.expectedTotalBytes
@@ -34,6 +33,5 @@ class PokemonDetailsBackground extends StatelessWidget {
         );
       },
     );
-    
   }
 }

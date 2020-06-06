@@ -57,7 +57,7 @@ class Pokemon {
     List<String> result = [];
     for (var item in item["types"]) {
       result.add(item["color"]["hex"]);
-    }    
+    }
 
     if (result.length == 1) {
       result.add("white");
@@ -74,7 +74,7 @@ class Pokemon {
     return result;
   }
 
-  String getMainTypeColor() {    
+  String getMainTypeColor() {
     return item["types"][0]["color"]["hex"];
   }
 }

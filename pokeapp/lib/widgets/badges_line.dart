@@ -4,24 +4,23 @@ import 'package:pokeapp/models/pokemon.dart';
 import 'package:strcolor/strcolor.dart';
 
 class BadgesLine extends StatelessWidget {
-  
-  const BadgesLine(
-      {Key key,
-      @required this.item,      
-      this.fontSize = 10,
-      this.badgeWidth = 50.0,
-      this.textColor,
-      this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
-      this.fontFamily = "Lato",})
-      : super(key: key);
+  const BadgesLine({
+    Key key,
+    @required this.item,
+    this.fontSize = 10,
+    this.badgeWidth = 50.0,
+    this.textColor,
+    this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
+    this.fontFamily = "Lato",
+  }) : super(key: key);
 
-  final Pokemon item;  
+  final Pokemon item;
   final double fontSize;
   final double badgeWidth;
   final Color textColor;
   final fontFamily;
   final mainAxisAlignment;
-  
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -33,7 +32,7 @@ class BadgesLine extends StatelessWidget {
   List<Widget> _createChildren(List<dynamic> items) {
     return List<Widget>.generate(items.length, (int index) {
       var itemType = items[index];
-      var colorHex = itemType["color"]["hex"].toString();      
+      var colorHex = itemType["color"]["hex"].toString();
       Color backgroundColor = colorHex.color().withOpacity(1.0);
       return Container(
         alignment: Alignment.topLeft,
@@ -42,10 +41,11 @@ class BadgesLine extends StatelessWidget {
           child: Text(
             itemType["name"].toString().toUpperCase(),
             style: TextStyle(
-                fontFamily: fontFamily,                
-                color: this.textColor != null ? this.textColor : Colors.grey[100],
-                fontSize: fontSize,
-                fontWeight: FontWeight.w900,),
+              fontFamily: fontFamily,
+              color: this.textColor != null ? this.textColor : Colors.grey[100],
+              fontSize: fontSize,
+              fontWeight: FontWeight.w900,
+            ),
           ),
           backgroundColor: backgroundColor,
         ),

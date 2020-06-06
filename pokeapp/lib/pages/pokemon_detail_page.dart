@@ -41,7 +41,7 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
   @override
   Widget build(BuildContext context) {
     List<Pokemon> items = Provider.of<Pokemons>(context).items;
-    
+
     setCenterPokemon(context, this.index);
 
     return Scaffold(
