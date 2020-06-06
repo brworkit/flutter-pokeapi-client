@@ -34,7 +34,8 @@ class Pokemon {
   }
 
   String getIcon() {
-    return item["image"];
+    // return item["image"];
+    return item["imageCover"].toString().replaceFirst("full", "detail");
   }
 
   String getImageCover() {
