@@ -57,7 +57,12 @@ class Pokemon {
     List<String> result = [];
     for (var item in item["types"]) {
       result.add(item["color"]["hex"]);
+    }    
+
+    if (result.length == 1) {
+      result.add("white");
     }
+
     return result;
   }
 

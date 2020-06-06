@@ -13,17 +13,10 @@ class PokemonDetailsItemCircle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width * 0.5;
-    // List<Color> colors = item.getTypesColor().reduce((value, element) => return value.toString().color())
     List<Color> colors = [];
-
     item.getTypesColor().forEach((element) {
       colors.add(element.color());
     });
-
-    if (colors.length == 1) {
-      colors.add((Colors.white));
-    }
-
     return CarrouselHeader(item: item, width: width, colors: colors);
   }
 }
@@ -43,10 +36,11 @@ class CarrouselHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      elevation: 5,
-      // color: colors[0].withOpacity(0.6),
-      // shadowColor: colors[0],
-      color: colors[0].withOpacity(0.2),
+      elevation: 2,
+      color: colors[0].withOpacity(0.1),
+      shadowColor: colors[0],
+      // color: colors[0].withOpacity(0.2),
+      // color: Colors.white,
       
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -158,6 +152,8 @@ class CarrouselHeader extends StatelessWidget {
           PokemonOverviewTypesBadges(
             item: item,
             mainAxisAlignment: MainAxisAlignment.center,
+            fontSize: 14,
+            width: 70.0,
           ),
         ],
       ),
