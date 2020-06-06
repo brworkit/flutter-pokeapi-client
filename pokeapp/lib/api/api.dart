@@ -9,7 +9,7 @@ class Api {
   Future<List<Map<String, dynamic>>> getAllPokemons() async {
     print("API getAllPokemons");
 
-    final response = await http.get('https://pokebattle-api-hml.herokuapp.com/pokebattle/v1/pokemons?from=1&to=150',
+    final response = await http.get('https://pokebattle-api-hml.herokuapp.com/pokebattle/v1/pokemons?from=1&to=151',
        headers: {'Content-Type': 'application/json'},
     );
 

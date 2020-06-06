@@ -5,14 +5,23 @@ import 'package:strcolor/strcolor.dart';
 
 class PokemonOverviewTypesBadges extends StatelessWidget {
   
-
-  const PokemonOverviewTypesBadges({Key key, @required this.item, this.mainAxisAlignment=MainAxisAlignment.spaceBetween, this.fontSize=12, this.width = 50.0})
+  const PokemonOverviewTypesBadges(
+      {Key key,
+      @required this.item,      
+      this.fontSize = 10,
+      this.badgeWidth = 50.0,
+      this.textColor,
+      this.mainAxisAlignment = MainAxisAlignment.spaceBetween,
+      this.fontFamily = "Lato"})
       : super(key: key);
 
-  final Pokemon item;
-  final mainAxisAlignment;
+  final Pokemon item;  
   final double fontSize;
-  final width;
+  final double badgeWidth;
+  final Color textColor;
+  final fontFamily;
+  final mainAxisAlignment;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -25,19 +34,19 @@ class PokemonOverviewTypesBadges extends StatelessWidget {
   List<Widget> _createChildren(List<dynamic> items) {
     return List<Widget>.generate(items.length, (int index) {
       var itemType = items[index];
-      var colorHex = itemType["color"]["hex"].toString();
-      Color backgroundColor = colorHex.color().withOpacity(0.6);
-
+      var colorHex = itemType["color"]["hex"].toString();      
+      Color backgroundColor = colorHex.color().withOpacity(1.0);
       return Container(
         alignment: Alignment.topLeft,
         child: HexaRectangleBadge(
-          width: width,
+          width: badgeWidth,
           child: Text(
-            itemType["name"],
+            itemType["name"].toString().toUpperCase(),
             style: TextStyle(
-                color: backgroundColor.contrast(),
+                fontFamily: fontFamily,                
+                color: Colors.grey[100],
                 fontSize: fontSize,
-                fontWeight: FontWeight.bold),
+                fontWeight: FontWeight.w900),
           ),
           backgroundColor: backgroundColor,
         ),

@@ -11,7 +11,7 @@ class PokemonOverviewIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      icon: Icon(Icons.mic, color: Colors.white,),
+      icon: Icon(Icons.favorite_border, color: Colors.red,),
       onPressed: () {
           // play();
       },

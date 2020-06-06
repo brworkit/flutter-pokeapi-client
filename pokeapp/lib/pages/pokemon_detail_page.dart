@@ -52,9 +52,9 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
         backgroundColor: backgroundColor.withOpacity(0.7),
         actions: <Widget>[],        
       ),
-      body: Container(
+      body: Container(            
         height: double.infinity,
-        color: backgroundColor.withOpacity(0.1),
+        color: backgroundColor.withOpacity(0.1),        
         child: CarouselSlider.builder(
           itemCount: items.length,
           carouselController: carouselController,
@@ -63,7 +63,8 @@ class _PokemonDetailPageState extends State<PokemonDetailPage> {
               item: items[itemIndex],
             );
           },
-          options: CarouselOptions(
+          options: CarouselOptions( 
+              height: MediaQuery.of(context).size.height * 0.80,    
               autoPlay: false,
               enlargeCenterPage: true,
               aspectRatio: 1.0,
