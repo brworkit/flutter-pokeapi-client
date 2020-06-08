@@ -61,11 +61,24 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
   }
 
   background() {
+
+    List<String> images = ['https://cutewallpaper.org/21/pokemon-landscape-background/Beautiful-Pokemon-Background-iPad-Case-and-Skin.jpg',
+    'https://preview.redd.it/nwhdf1xlmyq31.jpg?auto=webp&s=538f6760f596c2577506e170c103376823080651',
+    'https://cdnb.artstation.com/p/assets/images/images/019/647/779/large/david-oswald-photo-jul-29-2-22-51-pm.jpg?1564424705',
+    'https://cdn.wallpapersafari.com/53/2/dtheXO.jpg',
+    'https://static.fandomspot.com/images/08/2071/00-featured-route-anime-pokemon-ostgame.jpg',
+    'https://archive-media-0.nyafuu.org/w/image/1465/76/1465765230660.jpg',
+    'https://media.pocketgamer.com/artwork/ra-82605-1585325135/pocketgamer-zoom-backgrounds-013.jpg'
+    ];
+
+    var image = (images..shuffle()).first;
+
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
           image: NetworkImage(
-              'https://cutewallpaper.org/21/pokemon-landscape-background/Beautiful-Pokemon-Background-iPad-Case-and-Skin.jpg'),
+              image              
+              ),
           fit: BoxFit.cover,
         ),
       ),
