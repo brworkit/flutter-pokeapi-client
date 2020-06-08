@@ -192,19 +192,89 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
     );
   }
 
-  createDescription() {
+  createAbout() {
     return Align(
       alignment: Alignment.topLeft,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Text(
-          item.getDescription(),
-          overflow: TextOverflow.ellipsis,
-          maxLines: 8,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
+        child: Container(
+          child: Text(
+            item.getDescription(),
+            overflow: TextOverflow.ellipsis,
+            maxLines: 9,
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 18,
+            ),
           ),
+        ),
+      ),
+    );
+  }
+
+  createStats() {
+     
+    return Container(
+      padding: EdgeInsets.all(4.0),
+      child: Column(
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              Text(
+                "HP",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 18,
+                ),
+              ),
+              Text(
+                "18",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 18,
+                ),
+              ),
+              Container(
+                width: 100,
+                child: LinearProgressIndicator(                                  
+                  backgroundColor: Colors.grey,
+                  valueColor: AlwaysStoppedAnimation<Color>(
+                    Colors.green,
+                  ),
+                  value: 0.3,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  createEvolutions() {
+    return Container(
+      child: Text(
+        item.getDescription(),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 9,
+        style: TextStyle(
+          color: Colors.grey,
+          fontSize: 18,
+        ),
+      ),
+    );
+  }
+
+  createMoves() {
+    return Container(
+      child: Text(
+        item.getDescription(),
+        overflow: TextOverflow.ellipsis,
+        maxLines: 9,
+        style: TextStyle(
+          color: Colors.grey,
+          fontSize: 18,
         ),
       ),
     );
@@ -280,7 +350,7 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
     return Align(
       alignment: Alignment.bottomCenter,
       child: Padding(
-        padding: const EdgeInsets.all(2.0),
+        padding: const EdgeInsets.all(1.0),
         child: Container(
           height: heightSize(0.40, context),
           child: Card(
@@ -297,7 +367,7 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
                 child: Scaffold(
                   appBar: TabBar(
                     indicatorColor: Colors.red,
-                    labelColor: Colors.black,                    
+                    labelColor: Colors.black,
                     tabs: [
                       Tab(
                         text: "About",
@@ -316,12 +386,12 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
                       // Tab(icon: Icon(Icons.directions_bike)),
                     ],
                   ),
-                  body: TabBarView(                    
+                  body: TabBarView(
                     children: [
-                      Icon(Icons.directions_car),
-                      Icon(Icons.directions_transit),
-                      Icon(Icons.directions_bike),
-                      Icon(Icons.move_to_inbox),
+                      createAbout(),
+                      createStats(),
+                      createEvolutions(),
+                      createMoves(),
                     ],
                   ),
                 ),
