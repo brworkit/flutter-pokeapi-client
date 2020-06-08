@@ -60,18 +60,7 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
   }
 
   background() {
-    // List<String> images = [
-    //   'https://cutewallpaper.org/21/pokemon-landscape-background/Beautiful-Pokemon-Background-iPad-Case-and-Skin.jpg',
-    //   'https://preview.redd.it/nwhdf1xlmyq31.jpg?auto=webp&s=538f6760f596c2577506e170c103376823080651',
-    //   'https://cdnb.artstation.com/p/assets/images/images/019/647/779/large/david-oswald-photo-jul-29-2-22-51-pm.jpg?1564424705',
-    //   'https://cdn.wallpapersafari.com/53/2/dtheXO.jpg',
-    //   'https://static.fandomspot.com/images/08/2071/00-featured-route-anime-pokemon-ostgame.jpg',
-    //   'https://archive-media-0.nyafuu.org/w/image/1465/76/1465765230660.jpg',
-    //   'https://media.pocketgamer.com/artwork/ra-82605-1585325135/pocketgamer-zoom-backgrounds-013.jpg'
-    // ];
-
-    // var image = (images..shuffle()).first;
-
+  
     List<Color> colors = getHeaderBackgroundColors();
 
     return Container(
@@ -96,25 +85,21 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
 
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: Card(
-        color: Colors.transparent,
-        elevation: 4,
-        child: Container(
-          height: heightSize(0.50, context),
-          decoration: BoxDecoration(
-            // gradient: SweepGradient(
-            //   // colors: [Colors.white60, Colors.red, Colors.black26, Colors.green, Colors.blue],
-            //   colors: colors,
-            // ),
-            borderRadius: BorderRadius.circular(4.0),
-            border: Border.all(
-              color: Colors.transparent,
-              style: BorderStyle.solid,
-            ),
-            image: DecorationImage(
-              image: NetworkImage(item.getImageCover()),
-              fit: BoxFit.scaleDown,
-            ),
+      child: Container(
+        height: heightSize(0.50, context),
+        decoration: BoxDecoration(
+          // gradient: SweepGradient(
+          //   // colors: [Colors.white60, Colors.red, Colors.black26, Colors.green, Colors.blue],
+          //   colors: colors,
+          // ),
+          borderRadius: BorderRadius.circular(4.0),
+          border: Border.all(
+            color: Colors.transparent,
+            style: BorderStyle.solid,
+          ),
+          image: DecorationImage(
+            image: NetworkImage(item.getImageCover()),
+            fit: BoxFit.scaleDown,
           ),
         ),
       ),
@@ -140,29 +125,29 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
           child: Card(
             elevation: 16,
             color: Colors.transparent,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  item.getName().toUpperCase(),
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 36,
-                    fontFamily: "Anton",
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 8, bottom: 10),
-                  child: Icon(
-                    Icons.star,
-                    color: Colors.white,
-                    size: 60,
-                  ),
-                ),
-              ],
-            ),
+            // child: Row(
+            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            //   crossAxisAlignment: CrossAxisAlignment.center,
+            //   children: <Widget>[
+            //     Text(
+            //       item.getName().toUpperCase(),
+            //       style: TextStyle(
+            //         color: Colors.white,
+            //         fontWeight: FontWeight.bold,
+            //         fontSize: 36,
+            //         fontFamily: "Anton",
+            //       ),
+            //     ),
+            //     Padding(
+            //       padding: const EdgeInsets.only(right: 8, bottom: 10),
+            //       child: Icon(
+            //         Icons.star,
+            //         color: Colors.white,
+            //         size: 60,
+            //       ),
+            //     ),
+            //   ],
+            // ),
           ),
         ),
       ),
@@ -177,23 +162,36 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
         child: Card(
           elevation: 22,
           color: Colors.black38,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
           child: Container(
             width: double.infinity,
-            height: heightSize(0.45, context),
+            height: heightSize(0.50, context),
             child: Column(
               children: <Widget>[
                 Align(
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      "About",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 26,
-                      ),
-                    ),
+                    child:
+                    Text(
+                  item.getName().toUpperCase(),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 36,
+                    fontFamily: "Anton",
+                  ),
+                ), 
+                    // Text(
+                    //   "About",
+                    //   style: TextStyle(
+                    //     color: Colors.white,
+                    //     fontWeight: FontWeight.bold,
+                    //     fontSize: 26,
+                    //   ),
+                    // ),
                   ),
                 ),
                 SizedBox(
