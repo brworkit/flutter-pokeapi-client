@@ -16,11 +16,19 @@ class PokemonDeepDetailPage extends StatefulWidget {
       _PokemonDeepDetailPageState(this.index);
 }
 
-class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
+class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
+    with SingleTickerProviderStateMixin {
   int index;
   Pokemon item;
+  TabController _tabController;
 
   _PokemonDeepDetailPageState(this.index);
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController = new TabController(length: 5, vsync: this);
+  }
 
   onPageChanged(int index, CarouselPageChangedReason reason) {
     setState(() {
@@ -56,6 +64,7 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
           aboutDescription(),
           backButton(),
           favoriteIcon(),
+          createTabs(),
         ],
       ),
     );
@@ -158,57 +167,61 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
   aboutDescription() {
     return Align(
       alignment: Alignment.bottomCenter,
+      child: Card(
+        elevation: 4,
+        color: Colors.black38,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(25.0),
+            topRight: Radius.circular(25.0),
+          ),
+        ),
+        child: Container(
+          height: heightSize(0.50, context),
+          child: Column(
+            children: <Widget>[
+              createName(),
+              SizedBox(
+                height: 10,
+              ),
+              // createDescription(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  createDescription() {
+    return Align(
+      alignment: Alignment.topLeft,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Card(
-          elevation: 22,
-          color: Colors.black38,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(25.0),
-              topRight: Radius.circular(25.0),
-            ),
+        child: Text(
+          item.getDescription(),
+          overflow: TextOverflow.ellipsis,
+          maxLines: 8,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 18,
           ),
-          child: Container(
-            width: double.infinity,
-            height: heightSize(0.50, context),
-            child: Column(
-              children: <Widget>[
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      item.getName().toUpperCase(),
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 36,
-                        fontFamily: "Anton",
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      item.getDescription(),
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 8,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+        ),
+      ),
+    );
+  }
+
+  createName() {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text(
+          item.getName().toUpperCase(),
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+            fontSize: 36,
+            fontFamily: "Anton",
           ),
         ),
       ),
@@ -258,6 +271,63 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
           Icons.favorite,
           color: Colors.white,
           size: 36,
+        ),
+      ),
+    );
+  }
+
+  createTabs() {
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: Container(
+          height: heightSize(0.40, context),
+          child: Card(
+            color: Colors.transparent,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(25.0),
+                topRight: Radius.circular(25.0),
+              ),
+            ),
+            child: Expanded(
+              child: DefaultTabController(
+                length: 4,
+                child: Scaffold(
+                  appBar: TabBar(
+                    indicatorColor: Colors.red,
+                    labelColor: Colors.black,                    
+                    tabs: [
+                      Tab(
+                        text: "About",
+                      ),
+                      Tab(
+                        text: "Stats",
+                      ),
+                      Tab(
+                        text: "Evolution",
+                      ),
+                      Tab(
+                        text: "Moves",
+                      ),
+                      // Tab(text:"About", icon: Icon(Icons.directions_car)),
+                      // Tab(icon: Icon(Icons.directions_transit)),
+                      // Tab(icon: Icon(Icons.directions_bike)),
+                    ],
+                  ),
+                  body: TabBarView(                    
+                    children: [
+                      Icon(Icons.directions_car),
+                      Icon(Icons.directions_transit),
+                      Icon(Icons.directions_bike),
+                      Icon(Icons.move_to_inbox),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ),
         ),
       ),
     );
