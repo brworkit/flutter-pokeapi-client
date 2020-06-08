@@ -213,36 +213,40 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
   }
 
   createStats() {
-     
+    var statsName = "HP";
+    var statsValue = "18";
+    var statsRelativeValue = 0.7;
+
+    
     return Container(
       padding: EdgeInsets.all(4.0),
       child: Column(
         children: <Widget>[
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Text(
-                "HP",
+                statsName,
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 18,
                 ),
               ),
               Text(
-                "18",
+                statsValue,
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 18,
                 ),
               ),
               Container(
-                width: 100,
-                child: LinearProgressIndicator(                                  
+                width: 250,
+                child: LinearProgressIndicator(
                   backgroundColor: Colors.grey,
                   valueColor: AlwaysStoppedAnimation<Color>(
                     Colors.green,
                   ),
-                  value: 0.3,
+                  value: statsRelativeValue,
                 ),
               ),
             ],
@@ -402,4 +406,4 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
       ),
     );
   }
-}
+} 
