@@ -55,6 +55,7 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
             headerImage(),
             headerBar(),
             aboutDescription(),
+            backButton(),
           ],
         ));
   }
@@ -200,5 +201,33 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
         ),
       ),
     );
+  }
+
+  backButton() {
+    return Align(
+        alignment: Alignment.topLeft,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20.0),
+              color: Colors.black12,
+            ),
+            child: InkWell(
+                onTap: () {
+                  print("BACK BUTTON");
+                  Navigator.of(context).pop();
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(
+                    Icons.arrow_back,
+                    color: Colors.white,
+                    size: 22,
+                  ),
+                )),
+          ),
+        ),
+      );   
   }
 }

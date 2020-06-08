@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pokeapp/models/pokemon.dart';
+import 'package:pokeapp/pages/pokemon_deep_detail_page.dart';
+import 'package:pokeapp/providers/pokemons.dart';
 import 'package:pokeapp/widgets/details_background_image.dart';
 import 'package:pokeapp/widgets/badges_line.dart';
+import 'package:provider/provider.dart';
 import 'package:strcolor/strcolor.dart';
 
 class PokemonDetailsItemCircle extends StatelessWidget {
@@ -92,8 +95,20 @@ class CarrouselHeader extends StatelessWidget {
                           end: Alignment.bottomLeft,
                           colors: colors,
                         )),
-                    child: PokemonDetailsBackground(
-                      item: item,
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) {
+                          int index = Provider.of<Pokemons>(context)
+                              .items
+                              .indexOf(item);
+
+                          return PokemonDeepDetailPage(index);
+                        }));
+                      },
+                      child: PokemonDetailsBackground(
+                        item: item,
+                      ),
                     ),
                   ),
                   Row(

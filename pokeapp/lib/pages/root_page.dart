@@ -7,7 +7,7 @@ class RootPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // return PokemonOverviewPage();
-    return PokemonDeepDetailPage(8);
+    return PokemonOverviewPage();
+    // return PokemonDeepDetailPage(8);
   }
 }
