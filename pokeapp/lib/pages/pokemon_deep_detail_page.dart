@@ -47,20 +47,21 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
 
     setCenterPokemon(context, this.index);
     return Scaffold(
-        backgroundColor: Colors.white,
-        body: Stack(
-          children: <Widget>[
-            background(),
-            headerImage(),
-            headerBar(),
-            aboutDescription(),
-            backButton(),
-          ],
-        ));
+      backgroundColor: Colors.white,
+      body: Stack(
+        children: <Widget>[
+          background(),
+          headerImage(),
+          headerBar(),
+          aboutDescription(),
+          backButton(),
+          favoriteIcon(),
+        ],
+      ),
+    );
   }
 
   background() {
-  
     List<Color> colors = getHeaderBackgroundColors();
 
     return Container(
@@ -163,7 +164,10 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
           elevation: 22,
           color: Colors.black38,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(15.0),
+            borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(25.0),
+              topRight: Radius.circular(25.0),
+            ),
           ),
           child: Container(
             width: double.infinity,
@@ -174,24 +178,15 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
                   alignment: Alignment.topLeft,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child:
-                    Text(
-                  item.getName().toUpperCase(),
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 36,
-                    fontFamily: "Anton",
-                  ),
-                ), 
-                    // Text(
-                    //   "About",
-                    //   style: TextStyle(
-                    //     color: Colors.white,
-                    //     fontWeight: FontWeight.bold,
-                    //     fontSize: 26,
-                    //   ),
-                    // ),
+                    child: Text(
+                      item.getName().toUpperCase(),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 36,
+                        fontFamily: "Anton",
+                      ),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -243,6 +238,26 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage> {
                   size: 22,
                 ),
               )),
+        ),
+      ),
+    );
+  }
+
+  favoriteIcon() {
+    return Align(
+      alignment: Alignment.centerRight,
+      child: Container(
+        margin: EdgeInsets.only(right: 50, bottom: 16),
+        width: 50,
+        height: 50,
+        decoration: BoxDecoration(
+          color: Colors.red,
+          borderRadius: BorderRadius.all(Radius.circular(50.0)),
+        ),
+        child: Icon(
+          Icons.favorite,
+          color: Colors.white,
+          size: 36,
         ),
       ),
     );
