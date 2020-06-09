@@ -222,35 +222,12 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
       padding: EdgeInsets.all(4.0),
       child: Column(
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Text(
-                statsName,
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 18,
-                ),
-              ),
-              Text(
-                statsValue,
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 18,
-                ),
-              ),
-              Container(
-                width: 250,
-                child: LinearProgressIndicator(
-                  backgroundColor: Colors.grey,
-                  valueColor: AlwaysStoppedAnimation<Color>(
-                    Colors.green,
-                  ),
-                  value: statsRelativeValue,
-                ),
-              ),
-            ],
-          ),
+          StatsItem(statsName: "HP", statsValue: "30", statsRelativeValue: 0.4),
+          StatsItem(statsName: "Attack", statsValue: "35", statsRelativeValue: 0.7),
+          StatsItem(statsName: "Defense", statsValue: "56", statsRelativeValue: 0.4),
+          StatsItem(statsName: "Sp.Atk", statsValue: "94", statsRelativeValue: 0.55),
+          StatsItem(statsName: "Sp. Def", statsValue: "33", statsRelativeValue: 0.8),
+          StatsItem(statsName: "Speed", statsValue: "25", statsRelativeValue: 0.2),
         ],
       ),
     );
@@ -404,6 +381,58 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
           ),
         ),
       ),
+    );
+  }
+}
+
+class StatsItem extends StatelessWidget {
+  const StatsItem({
+    Key key,
+    @required this.statsName,
+    @required this.statsValue,
+    @required this.statsRelativeValue,
+  }) : super(key: key);
+
+  final String statsName;
+  final String statsValue;
+  final double statsRelativeValue;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: <Widget>[
+        Container(
+          width: widthSize(0.2, context),
+          child: Text(
+            statsName,
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 18,
+            ),
+          ),
+        ),
+        Container(
+          width: widthSize(0.2, context),
+          child: Text(
+            statsValue,
+            style: TextStyle(
+              color: Colors.black87,
+              fontSize: 18,
+            ),
+          ),
+        ),
+        Container(
+          width: widthSize(0.5, context),
+          child: LinearProgressIndicator(
+            backgroundColor: Colors.grey,
+            valueColor: AlwaysStoppedAnimation<Color>(
+              Colors.green,
+            ),
+            value: statsRelativeValue,
+          ),
+        ),
+      ],
     );
   }
 } 
