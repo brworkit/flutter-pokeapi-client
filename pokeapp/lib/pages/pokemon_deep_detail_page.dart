@@ -48,8 +48,10 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
     List<Pokemon> items = Provider.of<Pokemons>(context).items;
 
     if (items.isEmpty) {
-      return CircularProgressIndicator(
-        backgroundColor: Colors.red,
+      return Center(
+        child: CircularProgressIndicator(
+          backgroundColor: Colors.red,
+        ),
       );
     }
 
@@ -212,12 +214,7 @@ class _PokemonDeepDetailPageState extends State<PokemonDeepDetailPage>
     );
   }
 
-  createStats() {
-    var statsName = "HP";
-    var statsValue = "18";
-    var statsRelativeValue = 0.7;
-
-    
+  createStats() {    
     return Container(
       padding: EdgeInsets.all(4.0),
       child: Column(
