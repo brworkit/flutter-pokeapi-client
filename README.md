@@ -14,24 +14,21 @@ Install Flutter SKD on your machine [**here**](https://flutter.dev/docs/get-star
 
 **clone this repo:**
 
-    ```git
+    ```
 
     git clone https://github.com/brworkit/flutter-pokeapi-client.git
     
     ```
 **run it in your machine:**
 
-    ```bash
+    ```
         
         flutter run
     
     ```
 ## Screenshoots
-<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
 
-<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
-
-<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
+<a href="https://pub.dev/packages/strcolor"><img src="https://github.com/brworkit/flutter-pokeapi-client/clean-code/screenshots/1.png" title="PokeApi Client" alt="brworkit"></a>
 
 
 ## Dependencies
