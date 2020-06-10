@@ -1,16 +1,32 @@
-# pokeapp
+# Pokedéx
 
-A new Flutter project.
+<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
 
-## Getting Started
+<a href="https://pub.dev/packages/strcolor">
+   <img alt="Dart Pub" src="https://img.shields.io/pub/v/strcolor.svg?color=green&style=flat-square" />
+</a>
 
-This project is a starting point for a Flutter application.
+## Description
+Simple Pokedéx to show a litter bit of Flutter for Android.
 
-A few resources to get you started if this is your first Flutter project:
+## Getting Started 
+Install Flutter SKD on your machine [**here**](https://flutter.dev/docs/get-started/install)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Screenshoots
+<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
+
+<a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
+
+
+## Dependencies
+
+[strcolor](https://pub.dev/packages/strcolor)
+
+## Author
+
+[**2020 brworkit**](https://github.com/brworkit).
+
+## License
+[MIT License.](https://opensource.org/licenses/MIT)    
