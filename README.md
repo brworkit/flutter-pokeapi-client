@@ -7,7 +7,7 @@
 </a>
 
 ## Description
-Simple Pokedéx to show a litter bit of Flutter for Android.
+Simple Pokedéx to show a little of Flutter.
 
 ## Getting Started 
 Install Flutter SKD on your machine [**here**](https://flutter.dev/docs/get-started/install)
