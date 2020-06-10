@@ -14,22 +14,15 @@ Install Flutter SKD on your machine [**here**](https://flutter.dev/docs/get-star
 
 **clone this repo:**
 
-    ```
-
     git clone https://github.com/brworkit/flutter-pokeapi-client.git
-    
-    ```
-**run it in your machine:**
 
-    ```
-        
-        flutter run
+**run it in your machine:**
     
-    ```
+    flutter run
+    
 ## Screenshoots
 
 <img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/2.png" width="220" height="400"> <img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/1.png" width="220" height="400"> <img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/3.png" width="220" height="400"><img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/4.png" width="220" height="400"><img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/5.png" width="220" height="400"><img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/6.png" width="220" height="400"><img src="https://github.com/brworkit/flutter-pokeapi-client/blob/clean-code/screenshots/7.png" width="220" height="400">
-
 
 
 ## Dependencies
