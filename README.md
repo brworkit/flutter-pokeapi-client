@@ -13,12 +13,14 @@ Simple Pokedéx to show a litter bit of Flutter for Android.
 Install Flutter SKD on your machine [**here**](https://flutter.dev/docs/get-started/install)
 
 **clone this repo:**
+
     ```git
 
     git clone https://github.com/brworkit/flutter-pokeapi-client.git
     
     ```
 **run it in your machine:**
+
     ```bash
         
         flutter run
