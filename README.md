@@ -12,6 +12,18 @@ Simple Pokedéx to show a litter bit of Flutter for Android.
 ## Getting Started 
 Install Flutter SKD on your machine [**here**](https://flutter.dev/docs/get-started/install)
 
+**clone this repo:**
+    ```git
+
+    git clone https://github.com/brworkit/flutter-pokeapi-client.git
+    
+    ```
+**run it in your machine:**
+    ```bash
+        
+        flutter run
+    
+    ```
 ## Screenshoots
 <a href="https://pokeapi.co/"><img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" title="PokeApi" alt="PokeApi"></a>
 
